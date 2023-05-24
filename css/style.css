@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0 40px;
+}
+
+header {padding: 0 70px;}
+
+a {text-decoration: none}
+
+                          /* HEADER */
+
+.header-nav {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-left .logo {
+  margin: 0;
+  margin-right: 44px;
+
+  z-index: 100;
+}
+
+.nav-left h1 {
+  margin: 20px 32px 20px 0;
+
+}
+
+.nav-right {
+  display: flex;
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  align-items: center;
+
+  list-style: none;
+}
+
+.search {
+ margin: 0 25.5px 0 0;
+}
+
+.heart {
+  margin: 0 33px 0 0;
+}
+
+.nav-right .want-here {
+  box-sizing: border-box;
+
+  background-color: #756157;
+  border-radius: 4px;
+
+  padding: 8px 34px;
+
+  text-transform: uppercase;
+  color: white;
+}
+
+                          /* HERO */
+
+.hero {
+  text-align: center;
+  width: 1200px;
+  margin: -10px auto;
+  margin-bottom: 90px;
+}
+
+.hero img {
+  display: block;
+  margin: 0;
+  margin-bottom: 69px;
+
+  z-index: 1;
+}
+
+.hero h1 {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+                        /* ADVANTAGES */
+
+.list-advantages {
+  margin: 0 auto;
+  margin-bottom: 64px;
+  padding: 0;
+  width: 1200px;
+
+  display: grid;
+
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 385px 385px 385px;
+
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.advantage-item.text{
+  text-align: center;
+  padding: 0 85px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.advantage-item.text h2 {
+  margin: 0;
+  margin-bottom: 62px;
+
+  text-transform: uppercase;
+}
+
+.advantage-item.text p {
+  margin: 0;
+}
+
+.advantage-item:nth-child(1) {
+  background: #82B3D3;
+  color: white;
+}
+
+.advantage-item:nth-child(4) {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-item:nth-child(5) {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.advantage-item:nth-child(6) {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+
+.advantage-item:nth-child(9) {
+  background: #82B3D3;
+  color: white;
+}
