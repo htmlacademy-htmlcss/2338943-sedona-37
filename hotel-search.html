@@ -32,9 +32,45 @@
     <main>
       <section class="filter">
         <h1>Гостиницы Седоны</h1>
-        <p><img width="12" src="/img/icon-filter.svg" alt="иконка главной страницы"> > Гостиницы</p>
-
-
+        <p class="route"><img width="12" src="/img/icon-filter.svg" alt="иконка главной страницы"> > Гостиницы</p>
+        <form class="form-filter" action="https://echo.htmlacademy.ru/courses" method="post">
+          <ul class="infrastructure">
+            <p class="p-label">Инфраструктура</p>
+            <li><input name="pool" id="hotel-pool" type="checkbox" checked><label for="pool">Бассейн</label></li>
+            <li><input name="parking" id="hotel-parking" type="checkbox" checked><label for="parking">Парковка</label></li>
+            <li><input name="wifi" id="hotel-wifi" type="checkbox"><label for="wifi">Wi-Fi</label></li>
+          </ul>
+          <ul class="type-housing">
+            <p class="p-label">Тип проживания</p>
+            <li><input name="type-housing" value="hotel" id="hotel" type="radio" checked><label for="type-housing">Гостиница</label></li>
+            <li><input name="type-housing" value="motel" id="motel" type="radio"><label for="type-housing">Мотель</label></li>
+            <li><input name="type-housing" value="apartamento" id="apartamento" type="radio"><label for="type-housing">Апартаменты</label></li>
+          </ul>
+          <ul class="price">
+            <p class="p-label">Стоимость, ₽:</p>
+            <li>
+              <select name="min-price" id="min-price" class="select">
+                <option value="1000" selected>1 000</option>
+                <option value="8000">8 000</option>
+              </select>
+              <select name="max-price" id="max-price" class="select">
+                <option value="2000">2 000</option>
+                <option value="9000" selected>9 000</option>
+              </select>
+            </li>
+            <li>
+              тут типа ползунок
+            </li>
+          </ul>
+          <ul class="filter-buttons">
+            <li>
+              <input class="apply-button" type="submit" value="ПРИМЕНИТЬ" name="apply" id="apply">
+            </li>
+            <li>
+              <button class="reset-button">СБРОСИТЬ</button>
+            </li>
+          </ul>
+        </form>
       </section>
       <section class="catalog">
         <ul class="sorting">
@@ -44,7 +80,10 @@
             </h1>
           </li>
           <li>
-            Сначала дешёвые
+            <select name="galery-select-price" id="galery-select-price">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала с тараканами</option>
+            </select>
           </li>
           <li>
             <ul class="catalog-view">
@@ -154,10 +193,17 @@
           <li>10</li>
         </ul>
       </section>
-
       <article class="subscribe">
-        <h1>Подпишитесь на рассылку</h1>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form action="#" method="get">
+          <h1><label for="field-email">Подпишитесь на рассылку</label></h1>
+
+          <p>Только полезная информация и никакого спама,<br>
+            честное бойскаутское!</p>
+          <div class="input-box">
+            <input type="text" id="field-email" placeholder="Ваш e-mail">
+            <input type="submit" id="submit-subscribe" value="Подписаться" name="button-email">
+          </div>
+      </form>
       </article>
     </main>
     <footer>

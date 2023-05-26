@@ -123,9 +123,18 @@
           </li>
         </ul>
       </section>
-      <article class="subscribe">
-        <h1>Подпишитесь на рассылку</h1>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <article class="subscribe witch-background">
+        <form action="#" method="get">
+            <h1><label for="field-email">Подпишитесь на рассылку</label></h1>
+
+            <p>Только полезная информация и никакого спама,<br>
+              честное бойскаутское!</p>
+
+              <div class="input-box">
+                <input type="text" id="field-email" placeholder="Ваш e-mail">
+                <input type="submit" id="submit-subscribe" value="Подписаться" name="button-email">
+              </div>
+        </form>
       </article>
     </main>
     <footer>
