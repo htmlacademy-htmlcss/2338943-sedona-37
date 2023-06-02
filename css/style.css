@@ -138,7 +138,7 @@ td {
   cursor: pointer;
 }
 
-                          /* HERO */
+                                /* HERO */
 
 .hero {
   display: flex;
@@ -148,9 +148,9 @@ td {
   margin: -10px auto;
   margin-bottom: 90px;
 
-  background-image: url(/img/hero-background.jpg);
+  background-image: url("../img/hero-background.jpg");
   background-repeat: no-repeat;
-  background-position: top ;
+  background-position: top;
 
 }
 
@@ -358,7 +358,8 @@ td {
   width: 75px;
   height: 72px;
 
-  background-image: url(/img/recommendations/home-icon.svg);
+  background-image: url("../img/recommendations/home-icon.svg");
+  background-repeat: no-repeat;
 }
 
 .food::before {
@@ -367,7 +368,8 @@ td {
   width: 75px;
   height: 72px;
 
-  background-image: url(/img/recommendations/burger-icon.svg);
+  background-image: url("../img/recommendations/burger-icon.svg");
+  background-repeat: no-repeat;
 }
 
 .souvenirs::before {
@@ -377,7 +379,8 @@ td {
   height: 76px;
   margin-bottom: -4px;
 
-  background-image: url(/img/recommendations/souvenirs-icon.svg);
+  background-image: url("../img/recommendations/souvenirs-icon.svg");
+  background-repeat: no-repeat;
 }
 
                               /* HOTEL-SEARCH */
@@ -450,7 +453,9 @@ td {
 }
 
 .subscribe.with-background {
-  background-image: url(/img/subscribe-background.jpg);
+  background-image: url("../img/subscribe-background.jpg");
+  background-repeat: no-repeat;
+
   color: rgba(255, 255, 255, 1);
 }
 
@@ -537,8 +542,10 @@ td {
   margin: -10px auto;
   margin-bottom: 56.5px;
 
-  background-image: url(/img/filter-background.jpg);
+  background-image: url("../img/filter-background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+
   color: rgba(255, 255, 255, 1);
 }
 
@@ -926,7 +933,8 @@ td {
   width: 18px;
   height: 17px;
 
-  background-image: url(/img/catalog/icon-star.svg);
+  background-image: url("../img/catalog/icon-star.svg");
+  background-repeat: no-repeat;
 }
 
 .rating dl {
