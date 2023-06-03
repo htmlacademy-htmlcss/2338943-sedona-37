@@ -83,17 +83,21 @@ td {
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0;
 
-  list-style: none;
+  padding: 0;
+  padding-bottom: 10px;
 }
 
 .search-nav {
-  padding: 0;
-  border: 0;
- background: none;
+  height: 10px;
+  padding: 22px 22px;
 
- cursor: pointer;
+  border: 0;
+  background-image: url("../img/header/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 .heart {
@@ -101,23 +105,35 @@ td {
 
   margin: 0;
   margin-right: 20px;
-  padding: 0;
 
-  border: 0;
-  background: none;
+  height: 10px;
+  padding: 22px 22px;
 
- cursor: pointer;
+  background-image: url("../img/header/heart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 .heart::before {
-  font-size: 10px;
-  line-height: 10px;
+  content: "12";
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
 
   position: absolute;
-  content: "12";
-  top: -31px;
-  left: 24px;
+  top: 21px;
+  left: 20px;
 
+  background-color: rgba(125, 181, 79, 1);
+  border-radius: 50%;
+
+  font-size: 10px;
+  line-height: 20px;
+
+  text-align: center;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -134,8 +150,6 @@ td {
   color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   border: 0;
-
-  cursor: pointer;
 }
 
                                 /* HERO */
@@ -1005,7 +1019,7 @@ td {
 
                             /* FOOTER */
 
-.footer_main {
+.footer_list {
   box-sizing: border-box;
   width: 1200px;
 
@@ -1021,7 +1035,7 @@ td {
   align-items: center;
 }
 
-.footer_main a {
+.footer_list a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
 }
@@ -1044,7 +1058,7 @@ td {
   margin-right: 12.67px;
 }
 
-.footer_main .telefon {
+.footer_list .telefon {
 
   margin: 0;
 }
