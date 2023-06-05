@@ -15,6 +15,7 @@ h2, h3 {
 
 table {
   border-spacing: 0;
+
 }
 
 td {
@@ -100,13 +101,11 @@ td {
 }
 
 .search {
-  height: 20px;
-  padding: 22px 10px 22px 22px;
+  display: block;
+  width: 44px;
+  height: 64px;
 
-  margin-left: auto;
-  margin-right: 2px;
-
-  background-image: url("../img/header/search.svg");
+  background-image: url("../img/header/icon-search.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -114,13 +113,13 @@ td {
 }
 
 .favorites {
-  height: 20px;
-  padding: 22px 26px 22px 14px;
+  display: block;
+  width: 44px;
+  height: 64px;
 
-  margin-left: 8px;
   margin-right: 20px;
 
-  background-image: url("../img/header/favorites.svg");
+  background-image: url("../img/header/icon-favorites.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -604,10 +603,14 @@ td {
 }
 
 .filter h2 {
+  font-size: 60px;
+
   grid-area: header;
 
   margin: 0;
   margin-bottom: 8px;
+
+  text-transform: none;
 }
 
 .filter .route {
@@ -629,13 +632,28 @@ td {
 }
 
 .route .icon-home {
+  display: block;
+  width: 13px;
+  height: 15px;
+
   margin: 0;
   margin-right: 0.5px;
 
+  background-image: url("../img/catalog/icon-home-route.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.route .icon-route {
-  margin: 0 10.8px;
+.icon-route {
+  display: block;
+  width: 19.94px;
+  height: 8px;
+
+  margin: 0 10px;
+
+  background-image: url("../img/catalog/icon-route.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form-filter {
@@ -647,28 +665,38 @@ td {
   flex-direction: column;
 
   grid-area: infrastructure;
+
+  width: 150.43px;
   margin: 0;
   margin-right: 70px;
-  padding: 0;
 
+  padding: 0;
   border: 0;
 }
 
 .infrastructure legend {
+  font-weight: 700;
+  font-size: 20px;
+
   padding: 0;
-  margin-bottom: 33.5px;
+  margin-bottom: 32px;
+}
+
+.infrastructure input {
+  margin: 0;
+  margin-right: 16px;
 }
 
 .infrastructure label {
-  padding: 0;
+  font-size: 18px;
+
   margin-bottom: 19px;
 }
-
 
 .type-housing {
   display: flex;
   flex-direction: column;
-  width: 150.42;
+  width: 150.43px;
 
   grid-area: infrastructure;
   margin: 0;
@@ -679,11 +707,22 @@ td {
 }
 
 .type-housing legend {
+  font-weight: 700;
+  font-size: 20px;
+
   padding: 0;
-  margin-bottom: 33.5px;
+  margin-bottom: 32px;
+}
+
+.type-housing input {
+  margin: 0;
+  margin-right: 16px;
 }
 
 .type-housing label {
+  font-size: 18px;
+
+  margin: 0;
   margin-bottom: 19px;
 }
 
@@ -701,17 +740,27 @@ td {
 }
 
 .price legend {
+  font-weight: 700;
+  font-size: 20px;
+
   padding: 0;
   margin-bottom: 32px;
 }
 
 .price .min-price  {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 18px;
+
+  text-align: end;
+
+  box-sizing: border-box;
+  width: 143px;
+  height: 48px;
 
   margin: 0;
   margin-right: 2px;
   margin-bottom: 36px;
-  width: 143px;
-  height: 24px;
 
   padding: 12px 20px;
 
@@ -720,11 +769,18 @@ td {
 }
 
 .price .max-price  {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 18px;
+
+  text-align: end;
+
+  box-sizing: border-box;
+  width: 143px;
+  height: 48px;
 
   margin: 0;
   margin-bottom: 36px;
-  width: 143px;
-  height: 24px;
 
   padding: 12px 20px;
 
@@ -748,13 +804,19 @@ td {
 }
 
 .apply-button {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
   margin-top: 56px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   border: none;
   border-radius: 4px;
 
   width: 191px;
+  height: 36px;
   padding: 8px 50px;
 
   background-color: rgba(130, 179, 211, 1);
@@ -765,10 +827,16 @@ td {
 }
 
 .reset-button {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
   border: none;
   border-radius: 4px;
 
   width: 191px;
+  height: 36px;
   padding: 8px 50px;
 
   background-color: transparent;
@@ -779,36 +847,49 @@ td {
 
                             /* CATALOG */
 
-.catalog {
+.catalog-container {
   width: 1060px;
   margin: 0 auto;
   padding: 0px 70px;
 }
 
-.sorting {
+.result-sorting {
   display: flex;
-  width: 1060px;
 
-  justify-content: space-between;
-  align-items: center;
+  width: 1060px;
+  height: 49px;
+  padding: 0;
 
   margin: 0;
   margin-bottom: 60px;
+
+  list-style: none;
 }
 
 .sorting-label {
+  align-self: center;
   margin: 0;
   margin-right: 200px;
-
-  text-transform: uppercase;
 }
 
-#catalog-select-price {
-  width: 292px;
+.sorting-label h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
 
+.select-container {
   margin: 0;
-  margin-right: auto;
+  margin-right: 70px;
   margin-left: auto;
+}
+
+#select-price-rating {
+  font-family: 'PT Sans';
+  font-size: 18px;
+  line-height: 21px;
+
+  width: 292px;
+  height: 49px;
 
   padding: 14px 20px;
 
@@ -816,34 +897,57 @@ td {
   border-radius: 4px;
 }
 
-.sorting .catalog-view {
+.catalog-view-buttons {
   display: flex;
   width: 160px;
 
   margin: 0;
-  margin-left: auto;
 }
 
-.catalog-view button {
-  margin: 0;
+.catalog-view-buttons a {
+  display: block;
+  width: 48px;
+  height: 48px;
+
   margin-right: 8px;
-
-  padding: 17px 16px;
-
-  border: 1px solid rgba(229, 229, 229, 1);
-  border-radius: 4px;
 
   cursor: pointer;
 }
 
-.catalog-view button:last-child {
+.catalog-view-buttons a:last-child {
   margin-right: 0;
 }
 
-.catalog-view img {
-  display: block;
-  margin: 0;
-  padding: 0;
+.button-tile-view {
+  background-image: url(../img/catalog/icon-tile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+}
+
+.button-column-view {
+  background-image: url(../img/catalog/icon-column.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+}
+
+.button-list-view {
+  background-image: url(../img/catalog/icon-list.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+}
+
+.catalog-view-buttons .active {
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
 }
 
                           /* LIST CATALOG */
@@ -877,90 +981,104 @@ td {
   border-radius: 4px;
 }
 
-.card h3{
-  margin: 0;
-  margin-bottom: 16px;
-}
-
 .figure {
   display: flex;
   flex-direction: column;
 
   margin: 0;
-  padding: 0;
-}
+  margin-bottom: 16px;
 
+  overflow: hidden;
+}
 .figure .hotel-landscape {
+  margin-bottom: 16px;
+
   order: -1;
-  margin: 0;
-  margin-bottom: 16px;
+
+  overflow: hidden;
 }
 
-.card__price {
-  display: flex;
-  width: 300px;
-  justify-content: space-between;
+.figure .figcaption {
+  font-size: 24px;
+  line-height: 28px;
 
-  margin: 0;
-  margin-bottom: 16px;
+  text-transform: none;
 }
 
-.buttons {
-  box-sizing: border-box;
-  width: 300px;
+.card-price {
+  font-size: 18px;
+  line-height: 21px;
 
   display: flex;
   justify-content: space-between;
 
-  padding: 0;
-  margin: 0;
-  margin-bottom: 26px;
-
-  list-style: none;
+  margin-bottom: 16px;
 }
 
-.buttons a {
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-buttons a {
+  font-weight: 700;
+
   display: block;
+
   box-sizing: border-box;
   width: 140px;
+  height: 36px;
 
   text-transform: uppercase;
   text-decoration: none;
 
-  color: rgba(255, 255, 255, 1);
   padding: 8px 8px;
   text-align: center;
 
+  color: rgba(255, 255, 255, 1);
   background-color: rgba(117, 97, 87, 1);
 
-  border: 0;
   border-radius: 4px;
 }
 
-.buttons .to-favorites {
-  cursor: pointer;
+.card-buttons .to-favorites {
+  font-weight: 700;
+
+  width: 140px;
+  height: 36px;
 
   text-transform: uppercase;
-  box-sizing: border-box;
-  width: 140px;
 
-  color: rgba(255, 255, 255, 1);
   padding: 8px 8px;
+  color: rgba(255, 255, 255, 1);
   background-color: rgba(130, 179, 211, 1);
 
   border: 0;
   border-radius: 4px;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+}
+
+.card-buttons .to-favorites.active {
+  background-color: rgba(125, 181, 79, 1);
 }
 
 .hotel-status {
+  font-size: 16px;
+  line-height: 20px;
+
   display: flex;
+  box-sizing: border-box;
   width: 300px;
   justify-content: space-between;
 
   text-transform: uppercase;
 
-  padding: 0;
-  /* margin-bottom: 30px; */
+  padding: 9px 0px 8px 0px;
+
+  margin-top: 16px;
 }
 
 .rating {
@@ -968,7 +1086,6 @@ td {
   justify-content: space-around;
 
   margin: 0;
-  padding: 0 22px;
 }
 
 .stars {
@@ -991,25 +1108,22 @@ td {
   background-repeat: no-repeat;
 }
 
-.rating dl {
-  box-sizing: border-box;
-  width: 140px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.rating dt {
+  margin-left: auto;
 }
 
 .rating dd {
-  margin: 0;
+  margin-right: 22px;
+
   margin-left: 0.5em;
 }
 
                               /* PAGINATION */
 
 .pagination {
+  font-weight: 700;
+  font-size: 20px;
+
   display: flex;
   margin: 0;
   padding: 0;
@@ -1080,22 +1194,49 @@ td {
   color: rgba(0, 0, 0, 1);
 }
 
-.social-networks {
+.social-networks-container {
   display: flex;
   align-items: center;
 }
 
-.social-networks a:nth-child(1) {
-  margin-left: 11.67px;
-  margin-right: 26.33px;
+.logo-vkontakte {
+  display: block;
+  width: 47.33px;
+  height: 40px;
+
+  background-image: url(../img/footer/logo-vkontakte.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.social-networks a:nth-child(2) {
-  margin-right: 27.33px;
+.logo-telegram {
+  display: block;
+  width: 47.33px;
+  height: 40px;
+
+  background-image: url(../img/footer/logo-telegram.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.social-networks a:nth-child(3) {
-  margin-right: 12.67px;
+.logo-youtube {
+  display: block;
+  width: 47.33px;
+  height: 40px;
+
+  background-image: url(../img/footer/logo-youtube.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo-html-academy {
+  display: block;
+  width: 115px;
+  height: 33px;
+
+  background-image: url(../img/footer/logo-html-academy.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer_list .telefon {

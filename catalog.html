@@ -49,16 +49,19 @@
           <h2>Гостиницы Седоны</h2>
           <ol class="route">
             <li>
-              <a href="index.html" aria-label="На главную.">
-                <img class="icon-home" width="12" src="img/icon-filter.svg" alt="Иконка главной страницы.">
+              <a class="icon-home" href="index.html">
+                <span class="visually-hidden">Иконка главной страницы."</span>
               </a>
             </li>
-            <li class="icon-route">
-              <span class="visually-hidden">Далее.</span>
-              <img src="img/catalog/icon-route.svg" alt="Далее." aria-hidden="true">
+            <li>
+              <a class="icon-route">
+                <span class="visually-hidden">Далее.</span>
+              </a>
             </li>
             <li>
-              <a href="catalog.html" aria-label="Гостиницы в Седоне.">Гостиницы</a>
+              <a class="name-page" href="catalog.html">
+                <span>Гостиницы</span>
+              </a>
             </li>
           </ol>
           <form class="form-filter" action="https://echo.htmlacademy.ru/courses" method="get">
@@ -66,30 +69,30 @@
               <legend>Инфраструктура:</legend>
               <label>
                 <input type="checkbox" name="hotel-pool" id="hotel-pool" checked>
-                Бассейн
+                <span>Бассейн</span>
               </label>
               <label>
                 <input type="checkbox" name="hotel-parking" id="hotel-parking" checked>
-                Парковка
+                <span>Парковка</span>
               </label>
               <label>
                 <input type="checkbox" name="hotel-wifi" id="hotel-wifi">
-                Wi-Fi
+                <span>Wi-Fi</span>
               </label>
             </fieldset>
             <fieldset class="type-housing">
               <legend>Тип Жилья:</legend>
               <label>
                 <input type="radio" name="type-housing" value="hotel" id="hotel" checked>
-                Гостиница
+                <span>Гостиница</span>
               </label>
               <label>
                 <input type="radio" name="type-housing" value="motel" id="motel">
-                Мотель
+                <span>Мотель</span>
               </label>
               <label>
                 <input type="radio" name="type-housing" value="apartamento" id="apartamento">
-                Апартаменты
+                <span>Апартаменты</span>
               </label>
             </fieldset>
             <fieldset class="price">
@@ -127,49 +130,44 @@
             </fieldset>
           </form>
         </header>
-        <section class="catalog">
-          <h2 class="visually-hidden">Результат поиска.</h2>
-          <table>
-            <tr class="sorting">
-              <td class="sorting-label">Найдено гостиниц: 38</td>
-              <td>
-                <select name="catalog-select-price" id="catalog-select-price">
-                  <option value="cheap">Сначала дешёвые</option>
-                  <option value="expensive">Сначала дорогие</option>
-                </select>
-              </td>
-              <td class="catalog-view">
-                <button type="button" name="tile-view" id="tile-view" aria-label="Отобразить в виде плитки.">
-                  <img width="16" src="img/catalog/icon-tile.svg" alt="Иконка отображения в виде плитки.">
-                </button>
-                <button type="button" name="column-view" id="column-view"  aria-label="Отобразить в виде колонки">
-                  <img width="16" src="img/catalog/icon-column.svg" alt="Иконка отображения в виде колонки.">
-                </button>
-                <button type="button" name="list-view" id="list-view" aria-label="Отобразить в виде списка.">
-                  <img width="16" src="img/catalog/icon-list.svg" alt="Иконка отображения в виде списка.">
-                </button>
-              </td>
-            </tr>
-          </table>
+        <section class="catalog-container">
+          <ul class="result-sorting">
+            <li class="sorting-label">
+              <h2>Найдено гостиниц: 38</h2>
+            </li>
+            <li class="select-container">
+              <select name="select-price-rating" id="select-price-rating">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+            </li>
+            <li class="catalog-view-buttons">
+              <a class="button-tile-view active" aria-label="Отобразить в виде плитки." rel="nofollow"></a>
+              <a class="button-column-view"  aria-label="Отобразить в виде колонки." rel="nofollow"></a>
+              <a class="button-list-view" aria-label="Отобразить в виде списка." rel="nofollow"></a>
+            </li>
+          </ul>
           <ol class="list-catalog">
             <li class="card">
               <figure class="figure">
                 <figcaption>
-                  <h3>Amara Resort & Spa</h3>
+                  <h3 class="figcaption">Amara Resort & Spa</h3>
                 </figcaption>
-                  <img class="hotel-landscape" width="300" src="img/catalog/amara-resort-spa.jpg" alt="Пейзаж у гостиницы.">
+                <div class="hotel-landscape">
+                  <img width="300" src="img/catalog/amara-resort-spa.jpg" alt="Ночное звёздное небо.">
+                </div>
               </figure>
               <table>
-                <tr class="card__price">
+                <tr class="card-price">
                   <td>Гостиница</td>
                   <td>От 4000 ₽</td>
                 </tr>
-                <tr class="buttons">
+                <tr class="card-buttons">
                   <td>
                     <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
                   </td>
                   <td>
-                    <button class="to-favorites active" type="button" aria-label="Добавить в избранное.">В избранное</button>
+                    <button class="to-favorites" type="button">В избранное</button>
                   </td>
                 </tr>
                 <tr class="hotel-status">
@@ -201,21 +199,23 @@
             <li class="card">
               <figure class="figure">
                 <figcaption>
-                  <h3>Villas at Poco Diablo</h3>
+                  <h3 class="figcaption">Villas at Poco Diablo</h3>
                 </figcaption>
-                  <img class="hotel-landscape" width="300" src="img/catalog/villas-at-poco-diablo.jpg" alt="Пейзаж у гостиницы.">
+                <div class="hotel-landscape">
+                  <img width="300" src="img/catalog/villas-at-poco-diablo.jpg" alt="Горы на фоне радуги и грозовых облаков.">
+                </div>
               </figure>
               <table>
-                <tr class="card__price">
+                <tr class="card-price">
                   <td>Гостиница</td>
                   <td>От 5000 ₽</td>
                 </tr>
-                <tr class="buttons">
+                <tr class="card-buttons">
                   <td>
                     <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
                   </td>
                   <td>
-                    <button class="to-favorites active" type="button" aria-label="Добавить в избранное.">В избранное</button>
+                    <button class="to-favorites active" type="button">В избранное</button>
                   </td>
                 </tr>
                 <tr class="hotel-status">
@@ -247,21 +247,23 @@
             <li class="card">
               <figure class="figure">
                 <figcaption>
-                  <h3>Desert Quail Inn</h3>
+                  <h3 class="figcaption">Desert Quail Inn</h3>
                 </figcaption>
-                  <img class="hotel-landscape" width="300" src="img/catalog/desert-quail-inn.jpg" alt="Пейзаж у гостиницы.">
+                <div class="hotel-landscape">
+                  <img width="300" src="img/catalog/desert-quail-inn.jpg" alt="Ярко зелёные кустарники на фоне гор.">
+                </div>
               </figure>
               <table>
-                <tr class="card__price">
+                <tr class="card-price">
                   <td>Гостиница</td>
                   <td>От 2500 ₽</td>
                 </tr>
-                <tr class="buttons">
+                <tr class="card-buttons">
                   <td>
                     <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
                   </td>
                   <td>
-                    <button class="to-favorites active" type="button" aria-label="Добавить в избранное.">В избранное</button>
+                    <button class="to-favorites" type="button">В избранное</button>
                   </td>
                 </tr>
                 <tr class="hotel-status">
@@ -290,21 +292,23 @@
             <li class="card">
               <figure class="figure">
                 <figcaption>
-                  <h3>GreenTree Inn</h3>
+                  <h3 class="figcaption">GreenTree Inn</h3>
                 </figcaption>
-                  <img class="hotel-landscape" width="300" src="img/catalog/green-tree-inn.jpg" alt="Пейзаж у гостиницы.">
+                <div class="hotel-landscape" height="212">
+                  <img width="300" src="img/catalog/green-tree-inn.jpg" alt="Горы на фоне звёздного неба.">
+                </div>
               </figure>
               <table>
-                <tr class="card__price">
+                <tr class="card-price">
                   <td>Гостиница</td>
                   <td>От 1500 ₽</td>
                 </tr>
-                <tr class="buttons">
+                <tr class="card-buttons">
                   <td>
                     <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
                   </td>
                   <td>
-                    <button class="to-favorites active" type="button" aria-label="Добавить в избранное.">В избранное</button>
+                    <button class="to-favorites" type="button" aria-label="Добавить в избранное.">В избранное</button>
                   </td>
                 </tr>
                 <tr class="hotel-status">
@@ -363,15 +367,15 @@
           <li class="visually-hidden">
             <h2 class="visually-hidden">Наши контакты в социальных сетях.</h2>
           </li>
-          <li class="social-networks">
-            <a href="https://vk.com/htmlacademy">
-              <img src="img/footer/logo-vkontakte.svg" alt="Ссылка на страничку во Вконтакте." rel="nofollow">
+          <li class="social-networks-container">
+            <a class="logo-vkontakte" href="https://vk.com/htmlacademy" rel="nofollow">
+              <span class="visually-hidden">Страница во Вконтакте.</span>
             </a>
-            <a href="https://t.me/htmlacademy">
-              <img src="img/footer/logo-telegram.svg" alt="Ссылка на канал в Телеграмм." rel="nofollow">
+            <a class="logo-telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Канал в Телеграмм.</span>
             </a>
-            <a href="https://www.youtube.com/user/htmlacademyru">
-              <img src="img/footer/logo-youtube.svg" alt="Ссылка на Ютуб-канал." rel="nofollow">
+            <a class="logo-youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Канал на Ютубе.</span>
             </a>
           </li>
           <li class="visually-hidden">
@@ -386,8 +390,8 @@
             <h2>Ссылка на разработчика сайта.</h2>
           </li>
           <li>
-            <a href="#" rel="nofollow">
-              <img src="img/footer/logo-html-academy.svg" alt="Логотип html academy.">
+            <a class="logo-html-academy" href="https://htmlacademy.ru/" rel="nofollow">
+              <span class="visually-hidden">На страницу разработчика сайта.</span>
             </a>
           </li>
         </ul>
