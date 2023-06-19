@@ -8,15 +8,16 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="header-container">
         <h1 class="visually-hidden">Навигация по сайту.</h1>
-        <nav class="navigation-container">
+        <nav class="navigation-wrapper">
+          <div class="header-logo">
+            <a href="index.html" rel="nofollow">
+              <span class="visually-hidden">Логотип-ссылка на главную страницу.</span>
+              <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
+            </a>
+          </div>
           <ul class="list-navigation">
-            <li>
-              <a class="logo" href="index.html" aria-current="page" aria-label="На главную." rel="nofollow">
-                <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
-              </a>
-            </li>
             <li class="navigation-item active">
               <a href="index.html" rel="nofollow">Главная</a>
             </li>
@@ -29,10 +30,10 @@
           </ul>
           <div class="user-favorites-container">
             <a class="icon-page-search" href="#" rel="nofollow">
-              <span class="visually-hidden">Кнопка поиска по сайту.</span>
+              <span class="visually-hidden">Поиск.</span>
             </a>
             <a data-quantity="12" class="icon-favorites" href="#" rel="nofollow">
-              <span class="visually-hidden">Кнопка перехода в список избранного.</span>
+              <span class="visually-hidden">Избранное.</span>
             </a>
             <a class="want-here-button" href="catalog.html" target="_blank" rel="nofollow">
               <span>Хочу сюда!</span>
@@ -42,15 +43,17 @@
       </header>
       <main class="main-container">
         <h1 class="visually-hidden">Городок для туристов в Аризоне - Седона.</h1>
-        <section class="hero">
-          <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
-          <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <section class="hero-container">
+          <div class="topic-hero">
+            <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+            <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
         </section>
         <section class="advantages-container">
           <h2 class="visually-hidden">Преимущества.</h2>
           <ul class="list-advantages">
             <li class="advantage-item">
-              <h3>Настоящий&nbsp;<br>городок</h3>
+              <h3>Настоящий<br>городок</h3>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </li>
             <li class="advantage-item">
@@ -78,8 +81,10 @@
           </ul>
         </section>
         <section class="recommendations-container">
-          <h2>Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
-          <p>Опытный персонал и качественное обслуживание!</p>
+          <div class="topic-recommendations">
+            <h2>Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
+            <p>Опытный персонал и качественное обслуживание!</p>
+          </div>
           <ul class="list-recommendations">
             <li class="recommendations-item housing">
               <h3>Жильё</h3>
@@ -95,15 +100,15 @@
             </li>
           </ul>
         </section>
-        <section class="hotel-search">
+        <section class="hotel-search-container">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="hotel-search-button" href="catalog.html" target="_blank">Поиск гостиницы в Седоне</a>
         </section>
-        <section class="subscribe with-background">
+        <section class="subscribe-container with-background">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form class="input-box" action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма подписки на нашу рассылку.">
+          <form class="input-wrapper" action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма подписки на нашу рассылку.">
             <input class="field-email" type="email" required aria-label="Поле с почтовым адресом." name="field-email" placeholder="Ваш e-mail">
             <button class="submit-subscribe" name="submit-subscribe" type="submit">Подписаться</button>
           </form>
@@ -112,7 +117,7 @@
       <footer>
         <h1 class="visually-hidden">Наши контакты.</h1>
         <ul class="footer_list">
-          <li class="social-networks-container">
+          <li class="social-networks-wrapper">
             <a class="logo" href="https://vk.com/htmlacademy" rel="nofollow">
               <span class="visually-hidden">Ссылка на нашу страницу во Вконтакте.</span>
               <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,9 +144,8 @@
             </address>
           </li>
           <li>
-            <span class="visually-hidden">Ссылка на разработчика сайта.</span>
-            <a class="logo-html-academy" href="https://htmlacademy.ru/" rel="nofollow">
-              <span class="visually-hidden">На страницу разработчика сайта.</span>
+            <a class="logo-academy" href="https://htmlacademy.ru/" rel="nofollow">
+              <span class="visually-hidden">Ссылка на разработчика сайта.</span>
               <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
                 <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="black"/>
@@ -155,7 +159,7 @@
                 <path d="M78.3 18.2564C75 18.2564 72.8 20.7564 72.8 23.8564C72.8 26.8564 74.9 29.4564 78.3 29.4564C80.8 29.4564 82.8 28.1564 83.5 25.8564H81.4C80.9 26.8564 79.8 27.4564 78.4 27.4564C76.5 27.4564 75.1 26.1564 75 24.5564H83.8C84 20.9564 81.8 18.2564 78.3 18.2564ZM78.3 20.1564C80 20.1564 81.3 21.1564 81.6 22.7564H75.1C75.4 21.2564 76.6 20.1564 78.3 20.1564Z" fill="black"/>
                 <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" fill="black"/>
                 <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z" fill="black"/>
-                </svg>
+              </svg>
             </a>
           </li>
         </ul>
