@@ -195,11 +195,9 @@ body {
   font-size: 16px;
   line-height: 20px;
 
-  text-decoration: none;
   text-transform: uppercase;
   word-wrap: break-word;
 
-  box-sizing: border-box;
   width: 160px;
   min-height: 36px;
 
@@ -1189,10 +1187,8 @@ body {
 .list-catalog .list-catalog-item {
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: auto auto auto auto;
-
-  align-items: start;
-  align-content: start;
+  grid-template-rows: min-content 1fr min-content min-content;
+  align-content: space-between;
 
   column-gap: 20px;
   row-gap: 16px;
@@ -1229,7 +1225,6 @@ body {
   word-wrap: break-word;
 
   margin: 0;
-
 }
 
 .list-catalog-item .card-price {
@@ -1239,8 +1234,9 @@ body {
   color: rgba(51, 51, 51, 1);
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.5em;
 
   margin: 0;
 
@@ -1249,40 +1245,38 @@ body {
 }
 
 .card-price dt {
-  width: 140px;
+  max-width: 140px;
+  flex-shrink: 1;
   word-wrap: break-word;
 }
 
 .card-price dd {
-  width: 140px;
   margin: 0;
+  min-width: 140px;
 
   text-align: right;
   word-wrap: break-word;
 }
 
 .list-catalog-item .more-button {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
 
-  display: block;
   width: 140px;
-  height: 36px;
-
-  box-sizing: border-box;
+  min-height: 36px;
 
   word-wrap: break-word;
-
   text-transform: uppercase;
-  text-decoration: none;
 
-  padding: 8px 8px;
+  padding: 8px;
   text-align: center;
 
   color: rgba(255, 255, 255, 1);
   background-color: rgba(117, 97, 87, 1);
 
+  border: 0;
   border-radius: 4px;
 
   grid-column: 1 / 2;
@@ -1298,7 +1292,11 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.to-favorites {
+.more-button:disabled {
+  background-color: rgba(229, 229, 229, 1);
+}
+
+.list-catalog-item .to-favorites-button {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -1347,10 +1345,10 @@ body {
   background-color: rgba(229, 229, 229, 1);
 }
 
-.stars-list {
+.list-catalog-item .stars-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+
   align-items: flex-start;
 
   list-style: none;
@@ -1358,6 +1356,8 @@ body {
 
   grid-column: 1 / 2;
   grid-row: 4 / 5;
+
+  align-self: end;
 }
 
 .stars-list li {
@@ -1367,26 +1367,28 @@ body {
   background: url("../img/catalog/icon-star.svg") no-repeat left;
 }
 
-.rating-block {
+.list-catalog-item .rating-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 37px;
+  padding: 9px 22px 8px 23px;
 
   color: rgba(51, 51, 51, 1);
   text-transform: uppercase;
   word-wrap: break-word;
 
-  box-sizing: border-box;
-  width: 140px;
-  min-height: 37px;
-  margin: 0;
-  padding: 9px 22px 8px 23px;
-
   background-color: rgba(242, 242, 242, 1);
+
+  margin: 0;
   border-radius: 4px;
 
   grid-column: 2 / -1;
   grid-row: 4 / 5;
+
+  align-self: start;
 }
 
 .rating-block dt {
