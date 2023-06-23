@@ -34,9 +34,7 @@
             <a data-quantity="12" class="icon-favorites" href="#" rel="nofollow">
               <span class="visually-hidden">Избранное.</span>
             </a>
-            <a class="want-here-button" href="catalog.html" target="_blank" rel="nofollow">
-              <span>Хочу сюда!</span>
-            </a>
+            <button class="header-button">Хочу сюда!</button>
           </div>
         </nav>
       </header>
@@ -51,8 +49,14 @@
               </a>
             </li>
             <li>
+              <p class="name-page-before">
+                <span class="visually-hidden">Следующая страница.</span>
+              </p>
+            </li>
+            <li>
+
               <a class="name-page" href="catalog.html">
-                <span>Гостиницы</span>
+                Гостиницы
               </a>
             </li>
           </ol>
@@ -112,9 +116,9 @@
               </select>
             </li>
             <li class="sorting-view-buttons">
-              <button class="button-tile-view selected" href="#"rel="nofollow"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
-              <button class="button-column-view" href="#" rel="nofollow"><span class="visually-hidden">Отобразить в виде колонки.</span></button>
-              <button class="button-list-view" href="#" rel="nofollow"><span class="visually-hidden">Отобразить в виде списка.</span></button>
+              <button class="button-tile-view"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
+              <button class="button-column-view"><span class="visually-hidden">Отобразить в виде колонки.</span></button>
+              <button class="button-list-view"><span class="visually-hidden">Отобразить в виде списка.</span></button>
             </li>
           </ul>
           <ol class="list-catalog">
@@ -129,30 +133,26 @@
                 <dt>Гостиница</dt>
                 <dd>От 4000 ₽</dd>
               </dl>
-              <div class="card-buttons">
-                  <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-                  <button class="to-favorites" type="button">В избранное</button>
-              </div>
-              <div class="hotel-status">
-                <ul class="stars-list">
-                  <li>
-                    <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                </ul>
-                <dl class="rating-block">
-                  <dt>Рейтинг:</dt>
-                  <dd class="rating-number">8,5</dd>
-                </dl>
-              </div>
+              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
+              <button class="to-favorites" type="button">В избранное</button>
+              <ul class="stars-list">
+                <li>
+                  <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+              </ul>
+              <dl class="rating-block">
+                <dt>Рейтинг:</dt>
+                <dd class="rating-number">8,5</dd>
+              </dl>
             </li>
             <li class="list-catalog-item">
               <figure class="figure">
@@ -165,31 +165,26 @@
                 <dt>Гостиница</dt>
                 <dd>От 5000 ₽</dd>
               </dl>
-              <div class="card-buttons">
-                <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-                <button class="to-favorites elected" type="button">В избранном</button>
-              </div>
-              <div class="hotel-status">
-                <ul class="stars-list">
-                  <li>
-                    <span class="status visually-hidden">Трёхзвёздочная гостиница.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                </ul>
-                <dl class="rating-block">
-                  <dt>Рейтинг:</dt>
-                  &nbsp;
-                  <dd class="rating-number">9,2</dd>
-                </dl>
-              </div>
+              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
+              <button class="to-favorites elected" type="button">В избранном</button>
+              <ul class="stars-list">
+                <li>
+                  <span class="status visually-hidden">Трёхзвёздочная гостиница.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+              </ul>
+              <dl class="rating-block">
+                <dt>Рейтинг:</dt>
+                <dd class="rating-number">9,2</dd>
+              </dl>
             </li>
             <li class="list-catalog-item">
               <figure class="figure">
@@ -202,28 +197,23 @@
                 <dt>Гостиница</dt>
                 <dd>От 2500 ₽</dd>
               </dl>
-              <div class="card-buttons">
-                <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-                <button class="to-favorites" type="button">В избранное</button>
-              </div>
-              <div class="hotel-status">
-                <ul class="stars-list">
-                  <li>
-                    <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                </ul>
-                <dl class="rating-block">
-                  <dt>Рейтинг:</dt>
-                  &nbsp;
-                  <dd class="rating-number">6,9</dd>
-                </dl>
-              </div>
+              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
+              <button class="to-favorites" type="button">В избранное</button>
+              <ul class="stars-list">
+                <li>
+                  <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+              </ul>
+              <dl class="rating-block">
+                <dt>Рейтинг:</dt>
+                <dd class="rating-number">6,9</dd>
+              </dl>
             </li>
             <li class="list-catalog-item">
               <figure class="figure">
@@ -236,28 +226,23 @@
                 <dt>Гостиница</dt>
                 <dd>От 1500 ₽</dd>
               </dl>
-              <div class="card-buttons">
-                <a href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-                <button class="to-favorites" type="button">В избранное</button>
-              </div>
-              <div class="hotel-status">
-                <ul class="stars-list">
-                  <li>
-                    <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                  <li>
-                    <span class="visually-hidden" aria-hidden="true">Звезда.</span>
-                  </li>
-                </ul>
-                <dl class="rating-block">
-                  <dt>Рейтинг:</dt>
-                  &nbsp;
-                  <dd class="rating-number">5,0</dd>
-                </dl>
-              </div>
+              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
+              <button class="to-favorites" type="button">В избранное</button>
+              <ul class="stars-list">
+                <li>
+                  <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+                <li>
+                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
+                </li>
+              </ul>
+              <dl class="rating-block">
+                <dt>Рейтинг:</dt>
+                <dd class="rating-number">5,0</dd>
+              </dl>
             </li>
           </ol>
           <span class="visually-hidden">Номера страниц.</span>
