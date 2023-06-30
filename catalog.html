@@ -4,91 +4,97 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon-sedona.svg">
     <link rel="stylesheet" href="css/style.css">
-    <title>Седона. Главная</title>
+    <title>Седона. Гостиницы</title>
   </head>
   <body>
     <div class="page-container">
-      <header class="header-container">
+      <header>
         <h1 class="visually-hidden">Навигация по сайту.</h1>
         <nav class="navigation-wrapper">
-          <div class="header-logo">
-            <a href="index.html" aria-current="page" aria-label="На главную." rel="nofollow">
-              <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
-            </a>
-          </div>
+          <a class="header-logo" href="index.html" aria-current="page">
+            <span class="visually-hidden">Логотип-ссылка на главную страницу.</span>
+            <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
+          </a>
           <ul class="list-navigation">
             <li class="navigation-item">
-              <a href="index.html" rel="nofollow">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a href="#" target="_blank">О Седоне</a>
             </li>
             <li class="navigation-item active">
-              <a href="catalog.html" target="_blank">Гостиницы</a>
+              <a href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ul>
-          <div class="user-favorites-container">
-            <a class="icon-page-search" href="#" rel="nofollow">
-              <span class="visually-hidden">Поиск.</span>
-            </a>
-            <a data-quantity="12" class="icon-favorites" href="#" rel="nofollow">
-              <span class="visually-hidden">Избранное.</span>
-            </a>
-            <button class="header-button">Хочу сюда!</button>
-          </div>
+          <ul class="user-favorites-container">
+            <li>
+              <a class="icon-search" href="#">
+                <span class="visually-hidden">Поиск. </span>
+              </a>
+            </li>
+            <li>
+              <a class="icon-favorites" href="#" data-quantity="12">
+                <span class="visually-hidden">Избранное.</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="header-button-wrapper">
+            <li>
+              <a class="header-button" href="#hotel-search">Хочу сюда!</a>
+            </li>
+          </ul>
         </nav>
       </header>
       <main class="main-container">
         <h1 class="visually-hidden">Каталог гостиниц.</h1>
-        <header class="filter-container">
+        <header class="filter-container" id="hotel-search">
           <h2>Гостиницы Седоны</h2>
           <ol class="route-list">
             <li>
               <a class="icon-home" href="index.html">
                 <span class="visually-hidden">Иконка главной страницы.</span>
+                <svg width="13" height="15" aria-hidden="true" focusable="false" viewBox="0 0 13 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z"/>
+                  <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z"/>
+                </svg>
               </a>
             </li>
-            <li>
-              <p class="name-page-before">
-                <span class="visually-hidden">Следующая страница.</span>
-              </p>
-            </li>
-            <li>
-
-              <a class="name-page" href="catalog.html">
-                Гостиницы
-              </a>
+            <li class="name-page">
+              <svg width="8" height="11" aria-hidden="true" focusable="false" viewBox="0 0 8 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4687 1.66526 10.4687C1.79026 10.4687 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z"/>
+              </svg>
+              <a href="catalog.html">Гостиницы</a>
             </li>
           </ol>
           <form class="filter-wrapper" action="https://echo.htmlacademy.ru/courses" method="get">
             <fieldset class="infrastructure-box">
               <legend>Инфраструктура:</legend>
               <label>
-                <input type="checkbox" name="hotel-pool" id="hotel-pool" checked>
-                <span>Бассейн</span>
+                <input type="checkbox" name="hotel-pool" checked>
+                Бассейн
               </label>
               <label>
-                <input type="checkbox" name="hotel-parking" id="hotel-parking" checked>
-                <span>Парковка</span>
+                <input type="checkbox" name="hotel-parking" checked>
+                Парковка
               </label>
               <label>
-                <input type="checkbox" name="hotel-wifi" id="hotel-wifi">
-                <span>Wi-Fi</span>
+                <input type="checkbox" name="hotel-wifi">
+                Wi-Fi
               </label>
             </fieldset>
             <fieldset class="type-housing-box">
               <legend>Тип Жилья:</legend>
               <label>
-                <input type="radio" name="type-housing" value="hotel" id="hotel" checked>
-                <span>Гостиница</span>
+                <input type="radio" name="type-housing" value="hotel" checked>
+                Гостиница
               </label>
               <label>
-                <input type="radio" name="type-housing" value="motel" id="motel">
-                <span>Мотель</span>
+                <input type="radio" name="type-housing" value="motel">
+                Мотель
               </label>
               <label>
-                <input type="radio" name="type-housing" value="apartamento" id="apartamento">
-                <span>Апартаменты</span>
+                <input type="radio" name="type-housing" value="apartamento">
+                Апартаменты
               </label>
             </fieldset>
             <fieldset class="price-box">
@@ -115,8 +121,8 @@
                 <option value="expensive">Сначала дорогие</option>
               </select>
             </li>
-            <li class="sorting-view-buttons">
-              <button class="button-tile-view"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
+            <li class="view-buttons-box">
+              <button class="button-tile-view selected"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
               <button class="button-column-view"><span class="visually-hidden">Отобразить в виде колонки.</span></button>
               <button class="button-list-view"><span class="visually-hidden">Отобразить в виде списка.</span></button>
             </li>
@@ -133,8 +139,8 @@
                 <dt>Гостиница</dt>
                 <dd>От 4000 ₽</dd>
               </dl>
-              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-              <button class="to-favorites" type="button">В избранное</button>
+              <button class="more-button">Подробнее</button>
+              <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
                   <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
@@ -165,8 +171,8 @@
                 <dt>Гостиница</dt>
                 <dd>От 5000 ₽</dd>
               </dl>
-              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-              <button class="to-favorites elected" type="button">В избранном</button>
+              <button class="more-button">Подробнее</button>
+              <button class="to-favorites-button elected" type="button">В избранном</button>
               <ul class="stars-list">
                 <li>
                   <span class="status visually-hidden">Трёхзвёздочная гостиница.</span>
@@ -197,8 +203,8 @@
                 <dt>Гостиница</dt>
                 <dd>От 2500 ₽</dd>
               </dl>
-              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-              <button class="to-favorites" type="button">В избранное</button>
+              <button class="more-button">Подробнее</button>
+              <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
                   <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
@@ -226,14 +232,11 @@
                 <dt>Гостиница</dt>
                 <dd>От 1500 ₽</dd>
               </dl>
-              <a class="more-button" href="#" aria-label="Открыть страницу с подробностями о гостинице.">Подробнее</a>
-              <button class="to-favorites" type="button">В избранное</button>
+              <button class="more-button">Подробнее</button>
+              <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
                   <span class="status visually-hidden">Четырёхзвёздочная гостиница.</span>
-                </li>
-                <li>
-                  <span class="visually-hidden" aria-hidden="true">Звезда.</span>
                 </li>
                 <li>
                   <span class="visually-hidden" aria-hidden="true">Звезда.</span>
@@ -260,59 +263,59 @@
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="input-wrapper" action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма подписки на нашу рассылку.">
             <input class="field-email" type="email" required aria-label="Поле с почтовым адресом." name="field-email" placeholder="Ваш e-mail">
-            <button class="submit-subscribe" type="submit" aria-label="Отправить почтовый адрес." name="submit-subscribe">Подписаться</button>
+            <button class="submit-subscribe" type="submit" name="submit-subscribe" aria-label="Отправить почтовый адрес.">Подписаться</button>
           </form>
         </section>
       </main>
-      <footer>
+      <footer class="footer-container">
         <h1 class="visually-hidden">Наши контакты.</h1>
-        <ul class="footer_list">
-          <li class="social-networks-wrapper">
-            <a class="logo" href="https://vk.com/htmlacademy" rel="nofollow">
+        <ul class="social-networks-wrapper">
+          <li>
+            <a class="logo" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Ссылка на нашу страницу во Вконтакте.</span>
-              <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1164 14.8044C35.2824 14.2584 35.1164 13.8564 34.3214 13.8564H31.6964C31.0284 13.8564 30.7204 14.2034 30.5534 14.5864C30.5534 14.5864 29.2184 17.7824 27.3274 19.8584C26.7154 20.4604 26.4374 20.6514 26.1034 20.6514C25.9364 20.6514 25.6854 20.4604 25.6854 19.9134V14.8044C25.6854 14.1484 25.5014 13.8564 24.9454 13.8564H20.8174C20.4004 13.8564 20.1494 14.1604 20.1494 14.4494C20.1494 15.0704 21.0954 15.2144 21.1924 16.9624V20.7604C21.1924 21.5934 21.0394 21.7444 20.7054 21.7444C19.8154 21.7444 17.6504 18.5334 16.3654 14.8594C16.1164 14.1444 15.8644 13.8564 15.1934 13.8564H12.5664C11.8164 13.8564 11.6664 14.2034 11.6664 14.5864C11.6664 15.2684 12.5564 18.6564 15.8114 23.1374C17.9814 26.1974 21.0364 27.8564 23.8194 27.8564C25.4884 27.8564 25.6944 27.4884 25.6944 26.8534V24.5404C25.6944 23.8034 25.8524 23.6564 26.3814 23.6564C26.7714 23.6564 27.4384 23.8484 28.9964 25.3234C30.7764 27.0724 31.0694 27.8564 32.0714 27.8564H34.6964C35.4464 27.8564 35.8224 27.4884 35.6064 26.7604C35.3684 26.0364 34.5184 24.9854 33.3914 23.7384C32.7794 23.0284 31.8614 22.2634 31.5824 21.8804C31.1934 21.3894 31.3044 21.1704 31.5824 20.7334C31.5824 20.7334 34.7824 16.3074 35.1154 14.8044H35.1164Z" fill="#83B3D3"/>
+              <svg width="48" height="41" aria-hidden="true" focusable="false" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1164 14.8044C35.2824 14.2584 35.1164 13.8564 34.3214 13.8564H31.6964C31.0284 13.8564 30.7204 14.2034 30.5534 14.5864C30.5534 14.5864 29.2184 17.7824 27.3274 19.8584C26.7154 20.4604 26.4374 20.6514 26.1034 20.6514C25.9364 20.6514 25.6854 20.4604 25.6854 19.9134V14.8044C25.6854 14.1484 25.5014 13.8564 24.9454 13.8564H20.8174C20.4004 13.8564 20.1494 14.1604 20.1494 14.4494C20.1494 15.0704 21.0954 15.2144 21.1924 16.9624V20.7604C21.1924 21.5934 21.0394 21.7444 20.7054 21.7444C19.8154 21.7444 17.6504 18.5334 16.3654 14.8594C16.1164 14.1444 15.8644 13.8564 15.1934 13.8564H12.5664C11.8164 13.8564 11.6664 14.2034 11.6664 14.5864C11.6664 15.2684 12.5564 18.6564 15.8114 23.1374C17.9814 26.1974 21.0364 27.8564 23.8194 27.8564C25.4884 27.8564 25.6944 27.4884 25.6944 26.8534V24.5404C25.6944 23.8034 25.8524 23.6564 26.3814 23.6564C26.7714 23.6564 27.4384 23.8484 28.9964 25.3234C30.7764 27.0724 31.0694 27.8564 32.0714 27.8564H34.6964C35.4464 27.8564 35.8224 27.4884 35.6064 26.7604C35.3684 26.0364 34.5184 24.9854 33.3914 23.7384C32.7794 23.0284 31.8614 22.2634 31.5824 21.8804C31.1934 21.3894 31.3044 21.1704 31.5824 20.7334C31.5824 20.7334 34.7824 16.3074 35.1154 14.8044H35.1164Z" fill="#83B3D3"/>
               </svg>
             </a>
+          </li>
+          <li>
             <a class="logo" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Ссылка на наш канал в Телеграмм.</span>
-              <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="48" height="41" aria-hidden="true" focusable="false" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.785 12.9557L15.8405 19.1042C14.7523 19.5413 14.7586 20.1483 15.6408 20.419L19.7344 21.696L29.2058 15.7201C29.6537 15.4477 30.0629 15.5942 29.7265 15.8928L22.0528 22.8183H22.051L22.0528 22.8192L21.7705 27.0387C22.1841 27.0387 22.3667 26.8489 22.5987 26.625L24.5871 24.6915L28.7229 27.7464C29.4855 28.1664 30.0332 27.9506 30.2229 27.0405L32.9379 14.2453C33.2158 13.1311 32.5126 12.6266 31.785 12.9557Z" fill="#83B3D3"/>
               </svg>
             </a>
+          </li>
+          <li>
             <a class="logo" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ссылка на наш канал на Ютубе.</span>
-              <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="48" height="41" aria-hidden="true" focusable="false" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.9402 12.3564H16.5074C14.6467 12.3564 13.3333 13.9502 13.3333 15.7564V25.8502C13.3333 27.7627 14.6467 29.3564 16.5074 29.3564H32.1591C33.8009 29.3564 35.3333 27.7627 35.3333 25.9564V15.7564C35.1143 13.9502 33.8009 12.3564 31.9402 12.3564ZM20.9949 24.8939V16.8189L28.3283 20.8564L20.9949 24.8939Z" fill="#83B3D3"/>
               </svg>
             </a>
           </li>
-          <li>
-            <span class="visually-hidden">Наш номер телефона.</span>
-            <address class="telefon">
-              <a href="tel:88128121212" rel="nofollow">+7 (812) 812-12-12</a>
-            </address>
-          </li>
-          <li>
-            <a class="logo-academy" href="https://htmlacademy.ru/" rel="nofollow">
-              <span class="visually-hidden">Ссылка на разработчика сайта.</span>
-              <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
-                <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="black"/>
-                <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z" fill="black"/>
-                <path d="M41.1 4.95645C39.5 4.95645 38.2 5.75644 37.6 7.05645H37.5C36.9 5.85645 35.7 4.95645 34.1 4.95645C32.7 4.95645 31.6 5.75645 31 6.75645H30.9V5.15645H29V15.7564H31V10.3564C31 8.35645 32 6.85645 33.6 6.85645C35.1 6.85645 36 7.85645 36 9.45645V15.7564H38V10.1564C38 7.75645 39.4 6.85645 40.6 6.85645C42.1 6.85645 43 7.85645 43 9.45645V15.7564H45V9.25644C45.1 6.75644 43.6 4.95645 41.1 4.95645Z" fill="black"/>
-                <path d="M47.8 13.0564C47.8 14.7564 48.8 15.7564 50.6 15.7564H52.6V13.7564H50.9C50.2 13.7564 49.8 13.3564 49.8 12.6564V0.356445H47.8V13.0564Z" fill="black"/>
-                <path d="M28.9 20.0564C28 18.9564 26.7 18.2564 25 18.2564C21.9 18.2564 19.6 20.5564 19.6 23.8564C19.6 27.1564 21.9 29.4564 25 29.4564C26.8 29.4564 28 28.6564 28.8 27.5564H28.9V29.1564H30.9V18.5564H28.9V20.0564ZM25.3 27.4564C23.1 27.4564 21.7 25.8564 21.7 23.8564C21.7 21.8564 23.1 20.2564 25.3 20.2564C27.5 20.2564 28.9 21.8564 28.9 23.8564C28.9 25.7564 27.5 27.4564 25.3 27.4564Z" fill="black"/>
-                <path d="M44.2 22.3564C43.7 19.9564 41.6 18.2564 38.8 18.2564C35.4 18.2564 33.2 20.7564 33.2 23.8564C33.2 26.9564 35.4 29.4564 38.8 29.4564C41.6 29.4564 43.7 27.6564 44.2 25.2564H42.1C41.7 26.5564 40.4 27.5564 38.8 27.5564C36.6 27.5564 35.2 25.9564 35.2 23.9564C35.2 21.9564 36.6 20.3564 38.8 20.3564C40.4 20.3564 41.6 21.3564 42.1 22.5564H44.2V22.3564Z" fill="black"/>
-                <path d="M55.1 20.0564C54.2 18.9564 52.9 18.2564 51.2 18.2564C48.1 18.2564 45.8 20.5564 45.8 23.8564C45.8 27.1564 48.1 29.4564 51.2 29.4564C53 29.4564 54.2 28.6564 55 27.5564H55.1V29.1564H57.1V18.5564H55.1V20.0564ZM51.5 27.4564C49.3 27.4564 47.9 25.8564 47.9 23.8564C47.9 21.8564 49.3 20.2564 51.5 20.2564C53.7 20.2564 55.1 21.8564 55.1 23.8564C55.1 25.7564 53.6 27.4564 51.5 27.4564Z" fill="black"/>
-                <path d="M68.7 20.1564C67.8 19.0564 66.5 18.2564 64.8 18.2564C61.7 18.2564 59.4 20.5564 59.4 23.8564C59.4 27.1564 61.6 29.4564 64.8 29.4564C66.5 29.4564 67.8 28.6564 68.6 27.6564H68.7V29.1564H70.7V13.7564H68.7V20.1564ZM65.1 27.4564C62.9 27.4564 61.5 25.8564 61.5 23.8564C61.5 21.8564 62.9 20.2564 65.1 20.2564C67.3 20.2564 68.7 21.8564 68.7 23.8564C68.6 25.8564 67.2 27.4564 65.1 27.4564Z" fill="black"/>
-                <path d="M78.3 18.2564C75 18.2564 72.8 20.7564 72.8 23.8564C72.8 26.8564 74.9 29.4564 78.3 29.4564C80.8 29.4564 82.8 28.1564 83.5 25.8564H81.4C80.9 26.8564 79.8 27.4564 78.4 27.4564C76.5 27.4564 75.1 26.1564 75 24.5564H83.8C84 20.9564 81.8 18.2564 78.3 18.2564ZM78.3 20.1564C80 20.1564 81.3 21.1564 81.6 22.7564H75.1C75.4 21.2564 76.6 20.1564 78.3 20.1564Z" fill="black"/>
-                <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" fill="black"/>
-                <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z" fill="black"/>
-              </svg>
-            </a>
-          </li>
         </ul>
+        <address class="telefon">
+          <span class="visually-hidden">Наш номер телефона.</span>
+          <a href="tel:88128121212">+7 (812) 812-12-12</a>
+        </address>
+        <a class="logo-academy" href="https://htmlacademy.ru/" rel="nofollow">
+          <span class="visually-hidden">Ссылка на разработчика сайта.</span>
+          <svg width="115" height="34" aria-hidden="true" focusable="false" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
+            <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="black"/>
+            <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z" fill="black"/>
+            <path d="M41.1 4.95645C39.5 4.95645 38.2 5.75644 37.6 7.05645H37.5C36.9 5.85645 35.7 4.95645 34.1 4.95645C32.7 4.95645 31.6 5.75645 31 6.75645H30.9V5.15645H29V15.7564H31V10.3564C31 8.35645 32 6.85645 33.6 6.85645C35.1 6.85645 36 7.85645 36 9.45645V15.7564H38V10.1564C38 7.75645 39.4 6.85645 40.6 6.85645C42.1 6.85645 43 7.85645 43 9.45645V15.7564H45V9.25644C45.1 6.75644 43.6 4.95645 41.1 4.95645Z" fill="black"/>
+            <path d="M47.8 13.0564C47.8 14.7564 48.8 15.7564 50.6 15.7564H52.6V13.7564H50.9C50.2 13.7564 49.8 13.3564 49.8 12.6564V0.356445H47.8V13.0564Z" fill="black"/>
+            <path d="M28.9 20.0564C28 18.9564 26.7 18.2564 25 18.2564C21.9 18.2564 19.6 20.5564 19.6 23.8564C19.6 27.1564 21.9 29.4564 25 29.4564C26.8 29.4564 28 28.6564 28.8 27.5564H28.9V29.1564H30.9V18.5564H28.9V20.0564ZM25.3 27.4564C23.1 27.4564 21.7 25.8564 21.7 23.8564C21.7 21.8564 23.1 20.2564 25.3 20.2564C27.5 20.2564 28.9 21.8564 28.9 23.8564C28.9 25.7564 27.5 27.4564 25.3 27.4564Z" fill="black"/>
+            <path d="M44.2 22.3564C43.7 19.9564 41.6 18.2564 38.8 18.2564C35.4 18.2564 33.2 20.7564 33.2 23.8564C33.2 26.9564 35.4 29.4564 38.8 29.4564C41.6 29.4564 43.7 27.6564 44.2 25.2564H42.1C41.7 26.5564 40.4 27.5564 38.8 27.5564C36.6 27.5564 35.2 25.9564 35.2 23.9564C35.2 21.9564 36.6 20.3564 38.8 20.3564C40.4 20.3564 41.6 21.3564 42.1 22.5564H44.2V22.3564Z" fill="black"/>
+            <path d="M55.1 20.0564C54.2 18.9564 52.9 18.2564 51.2 18.2564C48.1 18.2564 45.8 20.5564 45.8 23.8564C45.8 27.1564 48.1 29.4564 51.2 29.4564C53 29.4564 54.2 28.6564 55 27.5564H55.1V29.1564H57.1V18.5564H55.1V20.0564ZM51.5 27.4564C49.3 27.4564 47.9 25.8564 47.9 23.8564C47.9 21.8564 49.3 20.2564 51.5 20.2564C53.7 20.2564 55.1 21.8564 55.1 23.8564C55.1 25.7564 53.6 27.4564 51.5 27.4564Z" fill="black"/>
+            <path d="M68.7 20.1564C67.8 19.0564 66.5 18.2564 64.8 18.2564C61.7 18.2564 59.4 20.5564 59.4 23.8564C59.4 27.1564 61.6 29.4564 64.8 29.4564C66.5 29.4564 67.8 28.6564 68.6 27.6564H68.7V29.1564H70.7V13.7564H68.7V20.1564ZM65.1 27.4564C62.9 27.4564 61.5 25.8564 61.5 23.8564C61.5 21.8564 62.9 20.2564 65.1 20.2564C67.3 20.2564 68.7 21.8564 68.7 23.8564C68.6 25.8564 67.2 27.4564 65.1 27.4564Z" fill="black"/>
+            <path d="M78.3 18.2564C75 18.2564 72.8 20.7564 72.8 23.8564C72.8 26.8564 74.9 29.4564 78.3 29.4564C80.8 29.4564 82.8 28.1564 83.5 25.8564H81.4C80.9 26.8564 79.8 27.4564 78.4 27.4564C76.5 27.4564 75.1 26.1564 75 24.5564H83.8C84 20.9564 81.8 18.2564 78.3 18.2564ZM78.3 20.1564C80 20.1564 81.3 21.1564 81.6 22.7564H75.1C75.4 21.2564 76.6 20.1564 78.3 20.1564Z" fill="black"/>
+            <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" fill="black"/>
+            <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z" fill="black"/>
+          </svg>
+        </a>
       </footer>
     </div>
   </body>
