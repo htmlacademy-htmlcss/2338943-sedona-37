@@ -168,6 +168,24 @@
           </svg>
         </a>
       </footer>
+      <div class="pop-up">
+        <h2>Поиск гостиницы в Седоне</h2>
+        <button class="esc-button">×</button>
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <label for="start-date" data-commentStart="Мы не можем отправить вас в прошлое.">Дата заезда:</label>
+          <input type="datetime" name="start-date" value="27 апреля 2020">
+          <label for="end-date" data-commentEnd="На эти даты есть свободные номера. Пока есть.">Дата выезда:</label>
+          <input type="datetime" name="end-date" value="1 сентября 2023">
+          <label for="adults">Взрослые:</label>
+          <input type="number" name="adults" value="2">
+          <label for="children">
+            Дети:
+            <span class="commentChildren">i</span>
+          </label>
+          <input type="number" name="children" value="2">
+          <button type="submit">Найти</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

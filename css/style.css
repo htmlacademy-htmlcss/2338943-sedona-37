@@ -32,15 +32,248 @@ body {
   color: black;
 }
 
-.visually-hidden {
+.pop-up {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  box-sizing: border-box;
+  width: 717px;
+  min-height: 576px;
+
+  top: 396px;
+  left: 239px;
+
+  padding: 64px 70px;
+
+  margin: 0 auto;
+
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.pop-up h2 {
+  font-size: 30px;
+  line-height: 36px;
+
+  text-transform: uppercase;
+
+  padding-right: 50px;
+  margin: 0;
+  margin-bottom: 64px;
+
+  position: relative;
+}
+
+.pop-up .esc-button {
+  position: absolute;
+  font-family: serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+
+  top: 64px;
+  left: 613px;
+
+  background-color: rgba(242, 242, 242, 1);
+  border: 3px solid transparent;
+  border-radius: 52px;
+
+  cursor: pointer;
+}
+
+.pop-up form {
+  display: grid;
+  grid-template-columns: 137px 110px 1fr 131px 110px;
+  grid-auto-rows: minmax(48px, auto);
+  align-items: center;
+  row-gap: 48px;
+}
+
+.pop-up label {
+  font-size: 20px;
+  font-family: PT Sans;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 12px 18px 12px 0;
+  text-transform: capitalize;
+
+  position: relative;
+  word-wrap: break-word;
+}
+
+.pop-up label:nth-of-type(1) {
+  grid-column: 1 / 2;
+}
+
+[data-commentStart]::after {
+  position: absolute;
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 21px;
+
+  content: attr(data-commentStart);
+  color: rgba(255, 87, 87, 1);
+  text-transform: none;
+
+  width: 320px;
+  height: 21px;
+
+  padding: 0 20px;
+
+  left: 137px;
+  top: 52px;
+}
+
+[data-commentEnd]::after {
+  position: absolute;
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 21px;
+
+  content: attr(data-commentEnd);
+  color: rgba(51, 51, 51, 1);
+  text-transform: none;
+
+  width: 371px;
+  height: 21px;
+
+  padding: 0 20px;
+
+  left: 137px;
+  top: 52px;
+}
+
+.pop-up label:nth-of-type(2) {
+  grid-column: 1 / 2;
+}
+
+.pop-up label:nth-of-type(3) {
+  grid-column: 1 / 2;
+}
+
+.pop-up label:nth-of-type(4) {
+  display: flex;
+  grid-column: 4 / 5;
+
+  position: relative;
+}
+
+.pop-up .commentChildren {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+
+  top: -1px;
+  margin-left: 10px;
+
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 27px;
+
+  text-align: center;
+
+  background-color: rgba(131, 179, 211, 1);
+  color: rgba(255, 255, 255, 1);
+
+  border-radius: 50%;
+  grid-column: 4 / 5;
+
+  position: relative;
+}
+
+.commentChildren:hover::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+
+  top: 31px;
+  left: 4px;
+
+  background:
+    linear-gradient(135deg, transparent 14.5px, rgba(51, 51, 51, 1) 14.5px),
+    linear-gradient(-135deg, transparent 15px, rgba(51, 51, 51, 1) 15px);
+
+  background-position:
+    10px,
+    -10px;
+}
+
+.commentChildren:hover::after {
+  font-size: 16px;
+  font-family: PT Sans;
+  font-weight: normal;
+  line-height: 20px;
+
+  text-transform: none;
+
+  position: absolute;
+  top: 41px;
+  left: -115px;
+
+  content:
+    "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
+  box-sizing: border-box;
+  width: 256px;
+  height: 143px;
+
+  padding: 20px 22px;
+  text-align: left;
+
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 1);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+}
+
+.pop-up input {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+
+  background-color: rgba(242, 242, 242, 1);
+
+  align-self: stretch;
+  border: none;
+  border-radius: 4px;
+}
+
+.pop-up input[type="datetime"] {
+  grid-column: 2 / -1;
+
+  padding: 12px 20px;
+
+  background-image: url(../img/icon-pop-up-datetime.svg);
+  background-repeat: no-repeat;
+  background-position: 400px;
+
+}
+
+.pop-up button[type="submit"] {
+  align-self: self-start;
+
+  font-size: 20px;
+  font-family: PT Sans;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 18px 77px;
+
+  border: none;
+  border-radius: 10px;
+  background: rgba(131, 179, 211, 1);
+
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+
+  grid-column: 1 / -1;
 }
 
                                                       /* PAGE-CONTAINER */
@@ -56,6 +289,7 @@ body {
 
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
                                                         /* NAVIGATION-WRAPPER*/
@@ -77,10 +311,12 @@ body {
 
 .navigation-wrapper .header-logo {
   display: block;
+  width: 140px;
+  height: 70px;
+
+  object-fit: cover;
 
   grid-column: 1 / 2;
-
-  object-fit: contain;
 }
 
 .navigation-wrapper .list-navigation {
@@ -663,8 +899,7 @@ body {
 }
 
 .field-email:focus {
-  outline: 3px solid;
-  outline-color: rgba(131, 179, 211, 1);
+  outline: none;
 }
 
 .subscribe-container .submit-subscribe {
@@ -718,7 +953,7 @@ body {
   width: 1060px;
   padding: 35px 70px 70px 70px;
 
-  margin: -11px auto;
+  margin: -10px auto;
   margin-bottom: 0;
 
   background-image: url("../img/filter-background.jpg");
@@ -778,6 +1013,14 @@ body {
   margin-left: 5px;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
+}
+
+.route-list a:hover {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.route-list a:active {
+  color: rgba(255, 255, 255, 0.30);
 }
 
 .filter-container .filter-wrapper {
@@ -973,6 +1216,15 @@ body {
   width: 143px;
   height: 48px;
 
+  padding: 12px 16px;
+
+  appearance: none;
+  background:
+    url(../img/catalog/background-text-min.svg)
+    104px 10px
+    no-repeat
+    rgba(242, 242, 242, 1);
+
   margin-right: 2px;
 
   border: 3px solid transparent;
@@ -980,9 +1232,8 @@ body {
 }
 
 .min-price:placeholder-shown {
-  text-align: right;
   padding: 0;
-  padding: 12px 10px;
+  padding: 12px 16px;
 }
 
 .min-price:focus-visible {
@@ -1000,18 +1251,24 @@ body {
   width: 143px;
   height: 48px;
 
-  margin-bottom: 36px;
+  padding: 12px 16px;
 
-  padding: 12px 20px;
+  appearance: none;
+  background:
+    url(../img/catalog/background-text-max.svg)
+    100px 10px
+    no-repeat
+    rgba(242, 242, 242, 1);
+
+    margin-bottom: 36px;
 
   border: 3px solid transparent;
   border-radius: 0 4px 4px 0;
 }
 
 .max-price:placeholder-shown {
-  text-align: right;
   padding: 0;
-  padding: 12px 10px;
+  padding: 12px 16px;
 }
 
 .max-price:focus-visible {
@@ -1261,7 +1518,7 @@ body {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
 
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   list-style: none;
 }
@@ -1294,7 +1551,7 @@ body {
 .figure .hotel-landscape {
   object-fit: cover;
 
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   order: -1;
 }
@@ -1302,9 +1559,6 @@ body {
 .figure .figcaption {
   font-size: 24px;
   line-height: 28px;
-
-  text-transform: none;
-  word-wrap: break-word;
 
   margin: 0;
 }
@@ -1663,4 +1917,15 @@ body {
 
 .logo-academy:active path {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
