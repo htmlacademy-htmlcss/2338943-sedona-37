@@ -12,11 +12,10 @@
         <h1 class="visually-hidden">Навигация по сайту.</h1>
         <nav class="navigation-wrapper">
           <a class="header-logo" href="index.html" aria-current="page">
-            <span class="visually-hidden">Логотип-ссылка на главную страницу.</span>
-            <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
+            <img width="140" height="70" src="img/header/logo.svg" alt="Логотип-ссылка на главную страницу.">
           </a>
           <ul class="list-navigation">
-            <li class="navigation-item">
+            <li class="navigation-item active">
               <a href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="navigation-item">
@@ -40,6 +39,7 @@
           </ul>
           <ul class="header-button-wrapper">
             <li>
+              <span class="visually-hidden">Кнопка для перехода к поиску гостиницы.</span>
               <a class="header-button" href="#hotel-search">Хочу сюда!</a>
             </li>
           </ul>
@@ -168,23 +168,53 @@
           </svg>
         </a>
       </footer>
-      <div class="pop-up">
-        <h2>Поиск гостиницы в Седоне</h2>
-        <button class="esc-button">×</button>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <label for="start-date" data-commentStart="Мы не можем отправить вас в прошлое.">Дата заезда:</label>
-          <input type="datetime" name="start-date" value="27 апреля 2020">
-          <label for="end-date" data-commentEnd="На эти даты есть свободные номера. Пока есть.">Дата выезда:</label>
-          <input type="datetime" name="end-date" value="1 сентября 2023">
-          <label for="adults">Взрослые:</label>
-          <input type="number" name="adults" value="2">
-          <label for="children">
-            Дети:
-            <span class="commentChildren">i</span>
-          </label>
-          <input type="number" name="children" value="2">
-          <button type="submit">Найти</button>
-        </form>
+      <div class="container-modal-window">
+        <div class="modal-window">
+          <h2>Поиск гостиницы в Седоне</h2>
+          <button class="esc-button" type="button">×</button>
+          <form action="https://echo.htmlacademy.ru/courses" method="get">
+            <label for="start-date" data-commentStart="Мы не можем отправить вас в прошлое.">Дата заезда:</label>
+            <input type="datetime" name="start-date" placeholder="Укажите дату">
+            <label for="end-date" data-commentEnd="На эти даты есть свободные номера. Пока есть.">Дата выезда:</label>
+            <input type="datetime" name="end-date" placeholder="Укажите дату">
+            <label for="adults">Взрослые:</label>
+            <div class="number-people">
+              <button class="number-button" type="button">
+                <span class="visually-hidden">Минус.</span>
+                <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#000000" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input type="number" name="adults" value="2">
+              <button class="number-button" type="button">
+                <span class="visually-hidden">Плюс.</span>
+                <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#000000" fill-opacity="0.3"/>
+                </svg>
+              </button>
+            </div>
+            <label for="children">
+              Дети:
+              <span class="commentChildren" tabindex="0">i</span>
+            </label>
+            <div class="number-people">
+              <button class="number-button" type="button">
+                <span class="visually-hidden">Минус.</span>
+                <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#000000" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input type="number" name="children" value="2">
+              <button class="number-button" type="button">
+                <span class="visually-hidden">Плюс.</span>
+                <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#000000" fill-opacity="0.3"/>
+                </svg>
+              </button>
+            </div>
+            <button type="submit">Найти</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
