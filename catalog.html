@@ -11,9 +11,8 @@
       <header>
         <h1 class="visually-hidden">Навигация по сайту.</h1>
         <nav class="navigation-wrapper">
-          <a class="header-logo" href="index.html" aria-current="page">
-            <span class="visually-hidden">Логотип-ссылка на главную страницу.</span>
-            <img width="140" height="70" src="img/header/logo.svg" alt="Логотип города Седона.">
+          <a class="header-logo" href="index.html">
+            <img width="140" height="70" src="img/header/logo.svg" alt="Логотип-ссылка на главную страницу.">
           </a>
           <ul class="list-navigation">
             <li class="navigation-item">
@@ -23,7 +22,7 @@
               <a href="#" target="_blank">О Седоне</a>
             </li>
             <li class="navigation-item active">
-              <a href="catalog.html" aria-current="page">Гостиницы</a>
+              <a href="catalog.html" aria-current="page" aria-current="page">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-favorites-container">
@@ -40,6 +39,7 @@
           </ul>
           <ul class="header-button-wrapper">
             <li>
+              <span class="visually-hidden">Кнопка для перехода к поиску гостиницы.</span>
               <a class="header-button" href="#hotel-search">Хочу сюда!</a>
             </li>
           </ul>
@@ -63,7 +63,7 @@
               <svg width="8" height="11" aria-hidden="true" focusable="false" viewBox="0 0 8 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4687 1.66526 10.4687C1.79026 10.4687 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z"/>
               </svg>
-              <a href="catalog.html">Гостиницы</a>
+              <a href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ol>
           <form class="filter-wrapper" action="https://echo.htmlacademy.ru/courses" method="get">
@@ -99,9 +99,13 @@
             </fieldset>
             <fieldset class="price-box">
               <legend>Стоимость, ₽:</legend>
-                <input class="min-price" type="number" placeholder="от" aria-label="Выбор минимальной стоимости.">
-                <input class="max-price" type="number" placeholder="до" aria-label="Выбор максимальной стоимости.">
-                <input class="range-price" type="range">
+                <input class="field-price min-price" type="number" value="0" aria-label="Выбор минимальной стоимости.">
+                <input class="field-price max-price" type="number" value="9000" aria-label="Выбор максимальной стоимости.">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0.5px; width: 226px">
+                    <button class="toggle-button min" type="button"><span class="visually-hidden">Изменить минимальную цену.</span></button>
+                    <button class="toggle-button max" type="button"><span class="visually-hidden">Изменить максимальную цену.</span></button>
+                  </div>
               </fieldset>
             <fieldset class="filter-buttons-box">
               <legend class="visually-hidden">Кнопки поиска и сброса.</legend>
@@ -116,15 +120,16 @@
               <h2>Найдено гостиниц: 38</h2>
             </li>
             <li class="sorting-select">
+              <span class="visually-hidden">Выбор порядка отображения по цене.</span>
               <select class="select-price-rating">
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
             </li>
             <li class="view-buttons-box">
-              <button class="button-tile-view selected"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
-              <button class="button-column-view"><span class="visually-hidden">Отобразить в виде колонки.</span></button>
-              <button class="button-list-view"><span class="visually-hidden">Отобразить в виде списка.</span></button>
+              <button class="button-tile-view selected" type="button"><span class="visually-hidden">Отобразить в виде плитки.</span></button>
+              <button class="button-column-view" type="button"><span class="visually-hidden">Отобразить в виде колонки.</span></button>
+              <button class="button-list-view" type="button"><span class="visually-hidden">Отобразить в виде списка.</span></button>
             </li>
           </ul>
           <ol class="list-catalog">
@@ -139,7 +144,7 @@
                 <dt>Гостиница</dt>
                 <dd>От 4000 ₽</dd>
               </dl>
-              <button class="more-button">Подробнее</button>
+              <button class="more-button" type="button">Подробнее</button>
               <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
@@ -171,7 +176,7 @@
                 <dt>Гостиница</dt>
                 <dd>От 5000 ₽</dd>
               </dl>
-              <button class="more-button">Подробнее</button>
+              <button class="more-button" type="button">Подробнее</button>
               <button class="to-favorites-button elected" type="button">В избранном</button>
               <ul class="stars-list">
                 <li>
@@ -203,7 +208,7 @@
                 <dt>Гостиница</dt>
                 <dd>От 2500 ₽</dd>
               </dl>
-              <button class="more-button">Подробнее</button>
+              <button class="more-button" type="button">Подробнее</button>
               <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
@@ -232,7 +237,7 @@
                 <dt>Гостиница</dt>
                 <dd>От 1500 ₽</dd>
               </dl>
-              <button class="more-button">Подробнее</button>
+              <button class="more-button" type="button">Подробнее</button>
               <button class="to-favorites-button" type="button">В избранное</button>
               <ul class="stars-list">
                 <li>
