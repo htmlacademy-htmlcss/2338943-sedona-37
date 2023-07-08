@@ -168,7 +168,7 @@
           </svg>
         </a>
       </footer>
-      <div class="container-modal-window display-none">
+      <div class="container-modal-window" data-test="modal">
         <div class="modal-window">
           <h2>Поиск гостиницы в Седоне</h2>
           <button class="esc-button" type="button">
@@ -180,23 +180,23 @@
           <form action="https://echo.htmlacademy.ru/courses" method="get">
             <label for="start-date">Дата заезда:</label>
             <input type="text" name="start-date" id="start-date" placeholder="Укажите дату">
-            <span class="can-not visually-hidden">Мы не можем отправить вас в прошлое.</span>
+            <span class="can-not">Мы не можем отправить вас в прошлое.</span>
             <span class="can visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
             <label for="end-date">Дата выезда:</label>
             <input type="text" name="end-date" id="end-date" placeholder="Укажите дату">
             <span class="can-not visually-hidden">Мы не можем отправить вас в прошлое.</span>
-            <span class="can visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
+            <span class="can">На эти даты есть свободные номера. Пока есть.</span>
             <label for="adults">Взрослые:</label>
             <div class="number-people">
               <button class="number-button" type="button" aria-label="Убавить количество взрослых.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                  <path d="M3 9V11H17V9H3Z" fill="#000000" fill-opacity="0.3"/>
                 </svg>
               </button>
               <input id="number-adults" name="adults" type="number" aria-label="Указанное количество взрослых." value="2" name="adults">
               <button class="number-button" type="button" aria-label="Прибавить количество взрослых.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#000000" fill-opacity="0.3"/>
                 </svg>
               </button>
             </div>
@@ -215,13 +215,13 @@
             <div class="number-people">
               <button class="number-button" type="button" aria-label="Убавить количество детей.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                  <path d="M3 9V11H17V9H3Z" fill="#000000" fill-opacity="0.3"/>
                 </svg>
               </button>
               <input id="number-children" name="children" type="number" aria-label="Указанное количество детей." value="2">
               <button class="number-button" type="button" aria-label="Прибавить количество детей.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#000000" fill-opacity="0.3"/>
                 </svg>
               </button>
             </div>
