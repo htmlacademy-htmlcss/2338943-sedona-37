@@ -205,6 +205,7 @@ body {
 
   outline: none;
 
+  padding: 0;
   border: 0;
   background-color: transparent;
 
@@ -343,11 +344,12 @@ body {
 }
 
 .number-button:hover path {
+  fill: #000;
   fill-opacity: 1;
 }
 
 .number-button:active path {
-  fill-opacity: 0.3;
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .number-button:focus-visible {
@@ -356,6 +358,7 @@ body {
 }
 
 .number-button:focus-visible path {
+  fill: #000;
   fill-opacity: 1;
 }
 
