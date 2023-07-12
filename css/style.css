@@ -119,14 +119,14 @@ body {
 
 .modal-window form {
   display: grid;
-  grid-template-columns: 137px 110px 1fr 131px 110px;
+  grid-template-columns: 137px 110px 1fr 131px 50px 60px;
   grid-template-rows: repeat(6, minmax(48px, auto));
   align-items: start;
 }
 
 .modal-window label {
-  align-self: self-start;
-  grid-row: span;
+  align-self: start;
+  grid-row: span 2;
 
   padding: 12px 18px 0 0;
 
@@ -275,24 +275,55 @@ body {
 }
 
 .modal-window input[type="text"] {
-  grid-column: 2 / -1;
   align-self: start;
 
+  box-sizing: border-box;
+  width: 100%;
   padding: 10px 60px 9px 17px;
 
-  background: url(../img/icon-pop-up-datetime.svg) no-repeat #f2f2f2;
-  background-position: 397px;
   outline: none;
 }
 
-.modal-window input[type="text"]:nth-of-type(1) {
+.modal-window .start-date {
+  position: relative;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
+
+  cursor: pointer;
 }
 
-.modal-window input[type="text"]:nth-of-type(2) {
+.start-date::after {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+
+  width: 20px;
+  height: 20px;
+
+  background: url(../img/icon-pop-up-datetime.svg) no-repeat;
+
+  content: "";
+}
+
+.modal-window .end-date {
+  position: relative;
   grid-column: 2 / -1;
   grid-row: 3 / 4;
+
+  cursor: pointer;
+}
+
+.end-date::after {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+
+  width: 20px;
+  height: 20px;
+
+  background: url(../img/icon-pop-up-datetime.svg) no-repeat;
+
+  content: "";
 }
 
 .modal-window input[type="text"]:hover {
@@ -310,12 +341,12 @@ body {
   background: #f2f2f2;
 }
 
-.number-people:nth-of-type(1) {
+.number-people.adults {
   grid-column: 2 / 3;
   grid-row: 5 / 6;
 }
 
-.number-people:nth-of-type(2) {
+.number-people.children {
   grid-column: 5 / -1;
   grid-row: 5 / 6;
 }
@@ -373,7 +404,7 @@ body {
 .modal-window button[type="submit"] {
   grid-column: 1 / -1;
   grid-row: -1 / -2;
-  align-self: self-start;
+  align-self: start;
 
   font-size: 20px;
   font-family: PT Sans;
@@ -464,6 +495,7 @@ body {
 .navigation-item.active {
   text-decoration: underline;
   text-decoration-color: #756257;
+  text-decoration-thickness: 2px;
   text-underline-offset: 19px;
   text-underline-position: under;
 }
@@ -471,6 +503,7 @@ body {
 .navigation-item:hover {
   text-decoration: underline;
   text-decoration-color: #756257;
+  text-decoration-thickness: 2px;
   text-underline-offset: 19px;
   text-underline-position: under;
 
