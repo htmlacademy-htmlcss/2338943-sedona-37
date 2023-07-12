@@ -119,7 +119,7 @@ body {
 
 .modal-window form {
   display: grid;
-  grid-template-columns: 137px 110px 1fr 131px 50px 60px;
+  grid-template-columns: 137px 110px 1fr 131px 110px;
   grid-template-rows: repeat(6, minmax(48px, auto));
   align-items: start;
 }
@@ -135,7 +135,7 @@ body {
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-window label:nth-of-type(1) {
@@ -159,6 +159,7 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #333333;
+  overflow-wrap: break-word;
 }
 
 .can-not {
@@ -171,6 +172,7 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #ff5757;
+  overflow-wrap: break-word;
 }
 
 
@@ -360,6 +362,7 @@ body {
 
   border: 3px solid transparent;
   border-radius: 5px;
+  background: none;
 }
 
 .number-button:hover path {
@@ -393,9 +396,15 @@ body {
 
   text-align: center;
 
+  background: none;
   border: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
+.modal-window input[type="number"]::-webkit-outer-spin-button,
 .modal-window input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
   appearance: none;
@@ -1352,12 +1361,17 @@ body {
 
   background: no-repeat #f2f2f2;
   border: 3px solid transparent;
+
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
+.field-price::-webkit-outer-spin-button,
 .field-price::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .price-box .min-price  {
@@ -1366,6 +1380,7 @@ body {
   background-image: url(../img/catalog/background-text-min.svg);
   background-position: right 17px center;
   border-radius: 4px 0 0 4px;
+
 }
 
 .min-price:focus-visible {
