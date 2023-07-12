@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon-sedona.svg">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <title>Седона. Главная</title>
   </head>
@@ -28,7 +28,7 @@
           <ul class="user-favorites-container">
             <li>
               <a class="icon-search" href="#">
-                <span class="visually-hidden">Поиск. </span>
+                <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
             <li>
@@ -56,12 +56,9 @@
         <section class="advantages-container" data-test="advantages">
           <h2 class="visually-hidden">Преимущества.</h2>
           <ul class="list-advantages">
-            <li class="advantage-item">
+            <li class="advantage-item img-right">
               <h3>Настоящий&nbsp;<br>городок</h3>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </li>
-            <li class="advantage-item duble">
-              <span class="visually-hidden">Фотография бара.</span>
             </li>
             <li class="advantage-item">
               <h3>Небольшая<br>площадь</h3>
@@ -75,10 +72,7 @@
               <h3>Мало<br>туристов</h3>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="advantage-item duble">
-              <span class="visually-hidden">Фотография каньона.</span>
-            </li>
-            <li class="advantage-item">
+            <li class="advantage-item img-left">
               <h3>Там есть<br> мост дьявола</h3>
               <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </li>
@@ -104,7 +98,7 @@
             </li>
           </ul>
         </section>
-        <section class="hotel-search-container" data-test="search">
+        <section class="hotel-search-container" id="hotel-search" data-test="search">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="hotel-search-button" href="catalog.html" target="_blank">Поиск гостиницы в Седоне</a>
@@ -113,7 +107,7 @@
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="input-wrapper" action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма подписки на нашу рассылку.">
-            <input class="field-email" type="email" required aria-label="Поле с почтовым адресом." name="field-email" placeholder="Ваш e-mail">
+            <input class="field-email" type="email" name="field-email" placeholder="Ваш e-mail" aria-label="Поле с почтовым адресом." required>
             <button class="submit-subscribe" type="submit" name="submit-subscribe" aria-label="Отправить почтовый адрес.">Подписаться</button>
           </form>
         </section>
@@ -179,11 +173,11 @@
           </button>
           <form action="https://echo.htmlacademy.ru/courses" method="get">
             <label for="start-date">Дата заезда:</label>
-            <input type="text" name="start-date" id="start-date" placeholder="Укажите дату">
+            <input type="text" id="start-date" name="start-date" placeholder="Укажите дату" required>
             <span class="can-not visually-hidden">Мы не можем отправить вас в прошлое.</span>
             <span class="can visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
             <label for="end-date">Дата выезда:</label>
-            <input type="text" name="end-date" id="end-date" placeholder="Укажите дату">
+            <input type="text" id="end-date" name="end-date" placeholder="Укажите дату" required>
             <span class="can-not visually-hidden">Мы не можем отправить вас в прошлое.</span>
             <span class="can visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
             <label for="adults">Взрослые:</label>
@@ -193,7 +187,7 @@
                   <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
                 </svg>
               </button>
-              <input id="number-adults" name="adults" type="number" aria-label="Указанное количество взрослых." value="2" name="adults">
+              <input type="number" id="number-adults" name="adults" aria-label="Указанное количество взрослых." value="2">
               <button class="number-button" type="button" aria-label="Прибавить количество взрослых.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
@@ -201,9 +195,7 @@
               </button>
             </div>
             <label for="children">
-              <span class="children-text">
-                Дети:
-              </span>
+              <span class="children-text">Дети:</span>
               <button class="tooltip-toggle" aria-labelledby="tooltip-label-children">
                 <svg width="26" height="26" aria-hidden="true" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
@@ -218,7 +210,7 @@
                   <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
                 </svg>
               </button>
-              <input id="number-children" name="children" type="number" aria-label="Указанное количество детей." value="2">
+              <input type="number" id="number-children" name="children" aria-label="Указанное количество детей." value="2">
               <button class="number-button" type="button" aria-label="Прибавить количество детей.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
