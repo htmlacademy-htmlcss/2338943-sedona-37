@@ -286,6 +286,8 @@ body {
   padding: 10px 60px 9px 17px;
 
   outline: none;
+
+  cursor:default;
 }
 
 .modal-window .start-date-block {
@@ -301,15 +303,18 @@ body {
 
   width: 20px;
   height: 20px;
+  padding: 0;
 
   background: url("../img/icon-pop-up-datetime.svg") no-repeat;
+  background-position: center;
   border: none;
   outline-color: #83b3d3;
 }
 
 .calendar-icon:hover {
-  box-shadow: 0 0 8px 6px #e4e3e3;
-  opacity: 0.8;
+  box-shadow: 0 0 3px 2px #e6e6e6;
+
+  transform: scale(1.2);
 }
 
 .calendar-icon:active {
@@ -1180,7 +1185,7 @@ body {
   flex-direction: column;
   gap: 16px;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 34px;
   padding: 0;
 
   border: 0;
@@ -1200,8 +1205,11 @@ body {
 }
 
 .infrastructure-box label {
+  position: relative;
+
   display: flex;
   width: 150px;
+  padding-left: 36px;
 
   font-size: 18px;
   line-height: 23px;
@@ -1217,31 +1225,31 @@ body {
   opacity: 0.3;
 }
 
-.infrastructure-box input {
-  width: 20px;
-  height: 20px;
+.infrastructure-box .checkdox-visually {
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  width: 14px;
+  height: 14px;
   margin: 1px 16px 0 0;
-  padding: 7px;
 
   background: #ffffff;
   border: 3px solid transparent;
   border-radius: 5px;
-
-  appearance: none;
 }
 
-.infrastructure-box input:focus-visible {
+.infrastructure-box input:focus-visible + .checkdox-visually {
   border-color: #83b3d3;
   outline: none;
 }
 
-.infrastructure-box input:checked {
+.infrastructure-box input:checked + .checkdox-visually {
   background-image: url("../img/catalog/icon-checked-infrastructure-box.svg");
   background-position: center;
  }
 
-.infrastructure-box input:active {
+.infrastructure-box input:active + .checkdox-visually {
   border-color: #83b3d3;
 }
 
@@ -1274,37 +1282,12 @@ body {
   margin-bottom: 32px;
 }
 
-.type-housing-box input {
-  width: 20px;
-  height: 20px;
-
-  margin: 1px 16px 0 0;
-  padding: 7px;
-
-  background: #ffffff;
-  border: 3px solid transparent;
-  border-radius: 50%;
-
-  appearance: none;
-}
-
-.type-housing-box input:focus-visible {
-  border-color: #83b3d3;
-  outline: none;
-}
-
-.type-housing-box input:checked {
-  background-image: url("../img/catalog/icon-checked-type-housing-box.svg");
-  background-position: center;
-}
-
-.type-housing-box input:active {
-  border-color: #83b3d3;
-}
-
 .type-housing-box label {
+  position: relative;
+
   display: flex;
   width: 150px;
+  padding-left: 36px;
 
   font-size: 18px;
   line-height: 23px;
@@ -1317,6 +1300,35 @@ body {
 
 .type-housing-box label:active {
   opacity: 0.3;
+}
+
+.type-housing-box .radio-visually {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 14px;
+  height: 14px;
+
+  margin: 1px 16px 0 0;
+
+  background: #ffffff;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+.type-housing-box input:focus-visible + .radio-visually {
+  border-color: #83b3d3;
+  outline: none;
+}
+
+.type-housing-box input:checked + .radio-visually {
+  background-image: url("../img/catalog/icon-checked-type-housing-box.svg");
+  background-position: center;
+}
+
+.type-housing-box input:active + .radio-visually {
+  border-color: #83b3d3;
 }
 
 .filter-wrapper .price-box {
