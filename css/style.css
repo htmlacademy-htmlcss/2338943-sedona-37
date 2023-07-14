@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0 40px;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 22px;
   line-height: 26px;
@@ -67,6 +67,8 @@ body {
   box-sizing: border-box;
   width: 717px;
   padding: 64px 70px;
+
+  overflow-wrap: break-word;
 
   background: #ffffff;
   border-radius: 30px;
@@ -131,7 +133,7 @@ body {
   padding: 12px 18px 0 0;
 
   font-size: 20px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
@@ -239,7 +241,7 @@ body {
   width: 256px;
   padding: 20px 22px;
 
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -260,7 +262,7 @@ body {
 .modal-window input {
   align-self: stretch;
 
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
@@ -286,15 +288,13 @@ body {
   outline: none;
 }
 
-.modal-window .start-date {
+.modal-window .start-date-block {
   position: relative;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-
-  cursor: pointer;
 }
 
-.start-date::after {
+.modal-window .calendar-icon {
   position: absolute;
   top: 14px;
   right: 20px;
@@ -302,30 +302,24 @@ body {
   width: 20px;
   height: 20px;
 
-  background: url(../img/icon-pop-up-datetime.svg) no-repeat;
-
-  content: "";
+  background: url("../img/icon-pop-up-datetime.svg") no-repeat;
+  border: none;
+  outline-color: #83b3d3;
 }
 
-.modal-window .end-date {
+.calendar-icon:hover {
+  box-shadow: 0 0 8px 6px #e4e3e3;
+  opacity: 0.8;
+}
+
+.calendar-icon:active {
+  opacity: 0.5;
+}
+
+.modal-window .end-date-block {
   position: relative;
   grid-column: 2 / -1;
   grid-row: 3 / 4;
-
-  cursor: pointer;
-}
-
-.end-date::after {
-  position: absolute;
-  top: 14px;
-  right: 20px;
-
-  width: 20px;
-  height: 20px;
-
-  background: url(../img/icon-pop-up-datetime.svg) no-repeat;
-
-  content: "";
 }
 
 .modal-window input[type="text"]:hover {
@@ -416,7 +410,7 @@ body {
   align-self: start;
 
   font-size: 20px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
   color: #ffffff;
@@ -621,7 +615,7 @@ body {
 }
 
 .header-button:active {
-  color: #ffffff4d
+  color: #ffffff4d;
 }
 
 .header-button.disabled {
@@ -707,7 +701,7 @@ body {
 .advantage-item h3 {
   width: 230px;
   min-height: 14px;
-  margin: 0 ;
+  margin: 0;
   margin-bottom: 30px;
 
   font-size: 24px;
@@ -758,7 +752,7 @@ body {
   align-items: start;
 }
 
-.advantage-item.img-right:nth-child(1)::after {
+.advantage-item.img-right::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -814,7 +808,7 @@ body {
   align-items: end;
 }
 
-.advantage-item.img-left:nth-child(5):after {
+.advantage-item.img-left::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -866,7 +860,6 @@ body {
   margin: 0;
   grid-template-columns: repeat(3, 400px);
   grid-auto-rows: minmax(385px, auto);
-  grid-auto-flow: dense;
 
   list-style: none;
 }
@@ -986,6 +979,10 @@ body {
   outline: none;
 }
 
+.hotel-search-button + .hotel-search-button {
+  margin-top: 10px;
+}
+
 .hotel-search-button:hover,
 .hotel-search-button:focus-visible {
   background-color: #615048;
@@ -1034,6 +1031,8 @@ body {
 .subscribe-container .input-wrapper {
   display: flex;
   min-height: 52px;
+  align-items: start;
+
   overflow-wrap: break-word;
 }
 
@@ -1052,7 +1051,8 @@ body {
 }
 
 .subscribe-container .submit-subscribe {
-  width: 232px;
+  min-width: 52px;
+  max-width: 342px;
   padding: 8px 50px;
 
   font-family: inherit;
@@ -1237,7 +1237,7 @@ body {
 }
 
 .infrastructure-box input:checked {
-  background-image: url(../img/catalog/icon-checked-infrastructure-box.svg);
+  background-image: url("../img/catalog/icon-checked-infrastructure-box.svg");
   background-position: center;
  }
 
@@ -1294,7 +1294,7 @@ body {
 }
 
 .type-housing-box input:checked {
-  background-image: url(../img/catalog/icon-checked-type-housing-box.svg);
+  background-image: url("../img/catalog/icon-checked-type-housing-box.svg");
   background-position: center;
 }
 
@@ -1354,7 +1354,7 @@ body {
   padding: 12px 16px;
   margin-bottom: 36px;
 
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1362,25 +1362,25 @@ body {
   background: no-repeat #f2f2f2;
   border: 3px solid transparent;
 
-  appearance: none;
+
   -webkit-appearance: none;
   -moz-appearance: textfield;
+  appearance: none;
 }
 
 .field-price::-webkit-outer-spin-button,
 .field-price::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
-.price-box .min-price  {
+.price-box .min-price {
   margin-right: 2px;
 
-  background-image: url(../img/catalog/background-text-min.svg);
+  background-image: url("../img/catalog/background-text-min.svg");
   background-position: right 17px center;
   border-radius: 4px 0 0 4px;
-
 }
 
 .min-price:focus-visible {
@@ -1389,7 +1389,7 @@ body {
 }
 
 .price-box .max-price {
-  background-image: url(../img/catalog/background-text-max.svg);
+  background-image: url("../img/catalog/background-text-max.svg");
   background-position: right 17px center;
 
   border-radius: 0 4px 4px 0;
@@ -1464,7 +1464,7 @@ body {
   margin-bottom: 32px;
   padding: 8px;
 
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1502,7 +1502,7 @@ body {
   min-height: 36px;
   padding: 8px;
 
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1589,12 +1589,12 @@ body {
   height: 49px;
   padding: 5px 50px 5px 18px;
 
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 
-  background: url(../img/catalog/icon-select-button.svg) no-repeat;
+  background: url("../img/catalog/icon-select-button.svg") no-repeat;
   background-position: right 18px center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -1611,7 +1611,7 @@ body {
 .select-price-rating:disabled {
   color: #0000004d;
 
-  background-image: url(../img/catalog/icon-select-button-disabled.svg);
+  background-image: url("../img/catalog/icon-select-button-disabled.svg");
   border: 2px solid #0000004d;
 }
 
@@ -1634,7 +1634,7 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 
-  cursor: pointer;
+  cursor: auto;
 }
 
 .view-buttons-box button:hover,
@@ -1648,15 +1648,15 @@ body {
 }
 
 .view-buttons-box .button-tile-view {
-  background-image: url(../img/catalog/icon-tile.svg);
+  background-image: url("../img/catalog/icon-tile.svg");
 }
 
 .view-buttons-box .button-column-view {
-  background-image: url(../img/catalog/icon-column.svg);
+  background-image: url("../img/catalog/icon-column.svg");
 }
 
 .view-buttons-box .button-list-view {
-  background-image: url(../img/catalog/icon-list.svg);
+  background-image: url("../img/catalog/icon-list.svg");
 }
 
 .view-buttons-box .selected {
@@ -1806,7 +1806,7 @@ body {
   min-height: 36px;
   padding: 8px 8px;
 
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1996,6 +1996,7 @@ body {
 
 .footer-container .social-networks-wrapper {
   grid-column: 1 / 2;
+  grid-row: 1 / 2;
 
   display: flex;
   height: min-content;
@@ -2027,6 +2028,7 @@ body {
 
 .footer-container .telefon {
   grid-column: 2 / 3;
+  grid-row: 1 / 2;
 
   width: 400px;
   margin: 5px auto;
@@ -2055,9 +2057,12 @@ body {
   color: #7561574d;
 }
 
-.footer-container .logo-academy {
+.footer-container .logo-academy-wrapper {
   grid-column: -1 / -2;
+  grid-row: 1 / 2;
+}
 
+.logo-academy-wrapper .logo-academy {
   display: block;
   width: 115px;
   height: 33px;
