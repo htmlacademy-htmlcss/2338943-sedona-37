@@ -191,16 +191,24 @@ body {
   align-items: start;
 }
 
+.modal-window .children-wrapper {
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+
+  display: flex;
+  align-items: start;
+}
+
 .modal-window .children-text {
-  max-width: 79px;
+  padding-right: 0;
+  max-width: 90px;
 }
 
 .modal-window .tooltip-toggle {
-  position: relative;
-  grid-column: 4 / 5;
-
+  width: 26px;
   margin-left: 10px;
   padding: 0;
+  padding-top: 11px;
 
   color: #ffffff;
 
