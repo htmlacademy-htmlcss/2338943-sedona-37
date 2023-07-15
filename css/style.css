@@ -86,7 +86,7 @@ body {
   margin-bottom: 64px;
 }
 
-.modal-window .esc-button {
+.modal-window .close-button {
   position: absolute;
   top: 64px;
   left: 613px;
@@ -106,15 +106,15 @@ body {
   border-radius: 52px;
 }
 
-.esc-button:hover {
+.close-button:hover {
   background-color: #e6e6e6;
 }
 
-.esc-button:active path {
+.close-button:active path {
   fill-opacity: 0.3;
 }
 
-.esc-button:focus-visible {
+.close-button:focus-visible {
   border-color: #83b3d3;
   outline: none;
 }
@@ -2046,7 +2046,7 @@ body {
   fill: #68a2ca4d;
 }
 
-.footer-container .telefon {
+.footer-container .telephone {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
@@ -2062,18 +2062,18 @@ body {
   word-wrap: break-word;
 }
 
-.telefon a {
+.telephone a {
   display: block;
 
   outline: none;
 }
 
-.telefon a:hover,
-.telefon a:focus-visible {
+.telephone a:hover,
+.telephone a:focus-visible {
   color: #756157;
 }
 
-.telefon a:active {
+.telephone a:active {
   color: #7561574d;
 }
 
