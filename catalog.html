@@ -348,7 +348,7 @@
             </div>
             <span class="can-not display-none">Мы не можем отправить вас в прошлое.</span>
             <span class="can display-none">На эти даты есть свободные номера. Пока есть.</span>
-            <label for="adults">Взрослые:</label>
+            <label for="number-adults">Взрослые:</label>
             <div class="number-people adults">
               <button class="number-button" type="button" aria-label="Убавить количество взрослых.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,16 +362,16 @@
                 </svg>
               </button>
             </div>
-            <label for="children">
-              <span class="children-text">Дети:</span>
-              <button class="tooltip-toggle" aria-labelledby="tooltip-label-children">
+            <div class="children-wrapper">
+              <label class="children-text" for="number-children">Дети:</label>
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
                 <svg width="26" height="26" aria-hidden="true" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
                 </svg>
                 <span class="tooltip-text-children" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </button>
-            </label>
+            </div>
             <div class="number-people children">
               <button class="number-button" type="button" aria-label="Убавить количество детей.">
                 <svg width="20" height="20" aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
