@@ -32,7 +32,7 @@ body {
   background: #f2f2f2;
 }
 
-                                                      /* PAGE-CONTAINER and POP-UP */
+/* PAGE-CONTAINER and POP-UP */
 
 .page-container {
   position: relative;
@@ -222,7 +222,7 @@ body {
 .tooltip-toggle:hover::after,
 .tooltip-toggle:focus-visible::after {
   position: absolute;
-  top: 41px;
+  top: 42px;
   left: 50%;
   transform: translate(-50%);
 
@@ -241,7 +241,7 @@ body {
 
 .tooltip-text-children {
   position: absolute;
-  top: 51px;
+  top: 52px;
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
@@ -457,7 +457,7 @@ body {
   color: #ffffff;
 }
 
-                                                        /* FOOTER. NAVIGATION-WRAPPER*/
+/* FOOTER. NAVIGATION-WRAPPER*/
 
 .navigation-wrapper {
   position: relative;
@@ -623,6 +623,7 @@ body {
   background: #756157;
   border: 0;
   border-radius: 4px;
+  outline: none;
 }
 
 .header-button:hover,
@@ -638,7 +639,7 @@ body {
   background-color: #e5e5e5;
 }
 
-                                                        /* MAIN-CONTAINER */
+/* MAIN-CONTAINER */
 
 .main-container {
   width: 1200px;
@@ -646,7 +647,7 @@ body {
   margin: 0 auto;
 }
 
-                                                        /* HERO-CONTAINER */
+/* HERO-CONTAINER */
 
 .hero {
   display: flex;
@@ -687,7 +688,7 @@ body {
   overflow-wrap: break-word;
 }
 
-                                                       /* ADVANTAGES */
+/* ADVANTAGES */
 
 .advantages-container {
   min-height: 385px;
@@ -839,7 +840,7 @@ body {
   content: "";
 }
 
-                                                      /* RECOMMENDATIONS */
+/* RECOMMENDATIONS */
 
 .recommendations-container {
   min-height: 385px;
@@ -948,7 +949,7 @@ body {
   color: #333333;
 }
 
-                                                     /* HOTEL-SEARCH-CONTAINER */
+/* HOTEL-SEARCH-CONTAINER */
 
 .hotel-search-container {
   min-height: 200px;
@@ -1012,7 +1013,7 @@ body {
   background-color: #e5e5e5;
 }
 
-                                                           /* SUBSCRIBE */
+/* SUBSCRIBE */
 
 
 .subscribe-container {
@@ -1102,7 +1103,7 @@ body {
   color: #ffffff;
 }
 
-                                                              /* FILTER */
+/* FILTER */
 
 .filter-container {
   display: grid;
@@ -1557,7 +1558,7 @@ body {
   color: #ffffff1a;
 }
 
-                                                         /* CATALOG-CONTAINER */
+/* CATALOG-CONTAINER */
 
 .catalog-container {
   width: 1060px;
@@ -1694,7 +1695,7 @@ body {
 }
 
 
-                                                           /* LIST CATALOG */
+/* LIST CATALOG */
 
 .catalog-container .list-catalog {
   display: grid;
@@ -1947,7 +1948,7 @@ body {
   word-wrap: break-word;
 }
 
-                                                             /* PAGINATION-WRAPPER */
+/* PAGINATION-WRAPPER */
 
 .catalog-container .pagination-wrapper {
   display: flex;
@@ -1999,7 +2000,7 @@ body {
   background-color: #e5e5e5;
 }
 
-                                                                  /* FOOTER */
+/* FOOTER */
 
 .footer-container {
   display: grid;
